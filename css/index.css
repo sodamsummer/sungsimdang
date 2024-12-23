@@ -1,0 +1,631 @@
+@charset "utf-8";
+
+/* main */
+main {
+    /* 보이는 화면만큼 */
+    width: 100%;
+    height: 100%;
+
+    margin-bottom: 200px;
+    /* 컨텐츠 간 간격 */
+}
+
+/* 슬라이드가 보여지는 공간 + 전체를 담은 부모 */
+div.mainviewer {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+    /* .slide의 기준 */
+}
+
+/* 각 슬라이드 */
+.mainviewer .slide {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    /* .slide 겹쳐놓기 */
+    top: 0;
+    left: 0;
+}
+
+.mainviewer .slide img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* .active */
+.mainviewer .slide.active {
+    z-index: 10;
+}
+
+.mainviewer .slide .ci {
+    height: 200px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mainviewer .slide .ci img {
+    width: 100%;
+    display: block;
+}
+
+/* 슬라이드 텍스트 디자인 */
+.mainviewer .slide .sli-txt h2 {
+    font-family: "Diphylleia", serif;
+}
+
+/* 슬라이드1 */
+.mainviewer .s1 .sli-txt h2 {
+    font-size: 20px;
+    font-size: 1.25rem;
+
+    position: absolute;
+    top: 61%;
+    left: 25%;
+}
+
+/* 슬라이드2 */
+.mainviewer .s2 .sli-txt {
+    position: absolute;
+    top: 61%;
+    left: 17%;
+}
+
+.mainviewer .s2 .sli-txt h2 {
+    font-size: 27.2px;
+    font-size: 1.7rem;
+
+    margin-bottom: 50px;
+}
+
+/* 슬라이드3 */
+.mainviewer .s3 .sli-txt {
+    position: absolute;
+    top: 55%;
+    left: 17%;
+}
+
+.mainviewer .s3 .sli-txt h2 {
+    font-size: 40px;
+    font-size: 2.5rem;
+
+    margin-bottom: 30px;
+}
+
+.mainviewer .s3 .sli-txt p {
+    font-family: "Noto Serif KR", serif;
+    font-weight: 300;
+}
+
+/* section */
+section {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+/* article - caption, tit, des 공통 디자인 */
+p.caption {
+    margin-bottom: 60px;
+}
+
+p.caption>a {
+    font-family: "DM Mono", monospace;
+
+    color: #FAB12F;
+    font-size: 14px;
+    font-size: 0.875rem;
+    letter-spacing: 1px;
+}
+
+p.caption:hover a {
+    text-decoration: underline;
+}
+
+.arti-tit {
+    font-family: "Diphylleia", serif;
+
+    color: #FEF3E2;
+    font-size: 48px;
+    font-size: 3rem;
+    word-break: keep-all;
+    line-height: 1.4;
+    margin-bottom: 60px;
+}
+
+.arti-des {
+    font-family: "Noto Serif KR", serif;
+
+    line-height: 2;
+    word-break: keep-all;
+    margin-bottom: 30px;
+}
+
+/* article1.에코성심 */
+.eco {
+    /* outline: 2px solid red; */
+    /* width: 100%; */
+
+    /* 컨텐츠 간 간격 */
+    margin-bottom: 200px;
+
+    /* background: url('/img/background.jpg') no-repeat top center/cover;
+    background-attachment: fixed;*/
+}
+
+.eco .inner {
+    position: relative;
+    /* .soboro의 기준 */
+}
+
+/* content */
+.eco .eco-con {
+    /* outline: 2px solid orange; */
+    width: 38%;
+    float: left;
+}
+
+/* video */
+.eco video {
+    /* outline: 2px solid red; */
+    width: 60%;
+    float: right;
+}
+
+/* 소보로 */
+.eco .soboro {
+    width: 250px;
+
+    position: absolute;
+    top: -50px;
+    left: 300px;        
+}
+
+.eco .soboro img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+
+    /* 흔들리는 애니메이션 */
+    animation: shake 10s ease-in-out infinite;
+}
+
+/* 흔들림 애니메이션 정의 */
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(10deg);
+    }
+
+    50% {
+        transform: rotate(-10deg);
+    }
+
+    75% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* ---------- */
+.eco::after {
+    content: "";
+    display: block;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.5);
+
+    margin-top: 200px;
+}
+
+
+/* article2.우리의 방식 */
+/* 
+.our-list의 li를 클릭하면 li>p가 등장/사라지면서 콘텐츠가 가진 높이 변화 >> article 자체에 너비를 줘야 하는지?
+ */
+.ourway {
+    width: 100%;
+
+    /* 컨텐츠 간 간격 */
+    margin-bottom: 200px;
+}
+
+.ourway .inner {
+    background-color: #FEF3E2;
+    color: #000;
+}
+
+/* 좌 - 텍스트 */
+.our-con {
+    padding: 20px;
+    box-sizing: border-box;
+
+    /* outline: 2px solid red; */
+    width: 50%;
+
+    float: left;
+}
+
+.our-con .caption a {
+    color: #000;
+}
+
+.our-con>.arti-tit {
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.our-con>.arti-des {
+    margin-bottom: 200px;
+    line-height: 1.7;
+}
+
+.our-con .our-list {
+    /* outline: 2px solid orange; */
+    float: none;
+}
+
+.our-con .our-list li {
+    float: none;
+    margin-bottom: 10px;
+}
+
+.our-con .our-list li a {
+    color: #000;
+}
+
+.our-con .our-list li a h4 {
+    /* outline: 2px solid green; */
+    font-family: "Diphylleia", serif;
+    font-size: 27px;
+    font-size: 1.75rem;
+
+    /* hover 효과 */
+    overflow: hidden;
+    background: linear-gradient(to top, #FAB12F 50%, black 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background-position 0.4s ease-in-out;
+    background-size: 100% 200%;
+    background-position: top;
+}
+
+.our-con .our-list li a h4:hover {    
+    background-position: bottom;
+}
+
+.our-con .our-list li a h4::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin: 5px 0;
+    background-color: #ccc;
+}
+
+.our-con .our-list li a p {
+    display: none;
+}
+
+/* on */
+.our-con .our-list li.on a p {
+    display: block;
+}
+
+/* 우 - 사진 */
+.way-imgbox {
+    /* outline: 2px solid blue; */
+    width: 50%;
+
+    /* 배경이미지 높이 기준 */
+    height: 715px;
+
+    background: url(/img/ourway__color.jpg);
+
+    float: right;
+}
+
+/* .way-imgbox img {
+    width: 100%;
+    display: block;
+} */
+
+
+/* ---------- */
+.ourway::after {
+    content: "";
+    display: block;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.5);
+
+    margin-top: 200px;
+}
+
+
+/* article3.명예의 전당 */
+/* 좌 - 타이틀 */
+.bestseller {
+    /* outline: 2px solid red; */
+
+    width: 100%;
+
+    /* 컨텐츠 간 간격 */
+    margin-bottom: 200px;
+}
+
+.bestseller .inner {
+    /* outline: 2px solid red; */
+    height: 1150px;
+}
+
+.bestseller::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.best-con {
+    width: 30%;
+    float: left;
+
+    /* 부모공간에서 고정될 위치 */
+    position: sticky;
+    top: 0;
+}
+
+/* 우 - 사진 */
+.best-imgbox {
+    width: 50%;
+    float: right;
+}
+
+.best-imgbox li {
+    width: 50%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+/* hover */
+.best-imgbox li:hover a img {
+    transform: scale(1.1);
+}
+
+.best-imgbox li a {
+    width: 100%;
+    padding: 40px 20px 0;
+    box-sizing: border-box;
+    display: block;
+    background-color: #FEF3E2;
+
+    overflow: hidden;
+}
+
+.best-imgbox li a img {
+    width: 100%;
+    display: block;
+
+    transition: all 0.7s;
+}
+
+.best-imgbox li a h5 {
+    line-height: 4;
+    color: #000;
+}
+
+
+/* ---------- */
+.familybrand::before {
+    content: "";
+    display: block;
+
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.5);
+
+    margin-bottom: 200px;
+}
+
+
+/* article4.패밀리브랜드 */
+.familybrand {
+    width: 100%;
+}
+
+.familybrand .outer {
+    /* background-color: #FEF3E2; */
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+
+    /* 컨텐츠 간 간격 */
+    margin-bottom: 200px;
+
+    /* 이미지의 높이를 기준으로 설정 */
+    height: 620px;
+
+    /* .all-slide의 기준 */
+    position: relative;
+}
+
+.familybrand .inner {
+    /* height값이 없으면 .fam-con의 높이만큼만 잡음 */
+    height: 100%;
+}
+
+/* 좌 - 이미지 */
+.familybrand .all-slide {
+    /* 모든 슬라이드를 담을 공간 */
+    /* 전체너비 기준으로 왼쪽에서부터 일정 너비 */
+    position: absolute;
+    right: 33%;
+
+    width: 67%;
+
+    /* 오른쪽으로 넘치는 슬라이드 감추기 */
+    overflow: hidden;
+}
+
+.familybrand .all-slide .viewer {
+    /* 실제 보이는 공간 */
+    /* outline: 2px solid red; */
+    width: 600px;
+    float: right;
+}
+
+.familybrand .all-slide .viewer .img-wrap {
+    /* 전체를 담는 부모 */
+    width: 1200%;
+}
+
+.familybrand .all-slide .viewer .img-wrap li {
+    /* 각 슬라이드 */
+    float: left;
+    width: 8.33%;
+    padding: 0 10px;
+    box-sizing: border-box;
+
+    opacity: 0.6;
+}
+
+.familybrand .all-slide .viewer .img-wrap li.active {
+    opacity: 1;
+}
+
+.familybrand .all-slide .viewer .img-wrap li img {
+    width: 100%;
+    display: block;
+}
+
+/* 우 - 내용 */
+.fam-con {
+    /* .inner 기준으로 1/4 */
+    width: 23%;
+    float: right;
+
+    height: 100%;
+
+    /* .btn-container의 기준 */
+    position: relative;
+
+    /* outline: 2px solid red; */
+}
+
+.fam-con .arti-tit {
+    margin-bottom: 30px;
+}
+
+.fam-con .fam-arrow {
+    /* outline: 2px solid red; */
+    height: 50px;
+    margin-bottom: 60px;    
+
+    float: left;
+}
+
+.fam-con .fam-arrow a {
+    /* outline: 2px solid red; */
+
+    width: 50px;
+    height: 50px;
+    float: left;    
+
+    font-size: 0;
+}
+
+.fam-con .fam-arrow a.prev {
+    background: url(/img/btn_prev_.png) no-repeat left/cover;
+}
+
+/* hover했을 때, .clicked */
+.fam-con .fam-arrow a.prev:hover, .fam-con .fam-arrow a.prev.clicked {
+    background: url(/img/btn_prev_.png) no-repeat right/cover;
+}
+
+.fam-con .fam-arrow a.next {
+    background: url(/img/btn_next_.png) no-repeat left/cover;
+    margin-left: 15px;
+}
+
+/* hover했을 때, .clicked */
+.fam-con .fam-arrow a.next:hover, .fam-con .fam-arrow a.next.clicked {
+    background: url(/img/btn_next_.png) no-repeat right/cover;
+}
+
+
+/* 페이저 */
+.fam-con .fam-arrow .pager {
+    /* outline: 2px solid red; */
+    display: inline-block;
+    
+    line-height: 50px;
+    letter-spacing: 5px;
+
+    margin-left: 15px;
+}
+
+.fam-con .fam-arrow .pager .num {
+    color: #FAB12F;
+}
+
+/* 매장 정보 */
+.fam-con .fam-info {
+    /* background-color: #ccc; */
+
+    font-family: "Noto Serif KR", serif;
+    font-size: 16px;
+    font-size: 1rem;
+}
+
+.fam-con .fam-info li {
+    display: none;
+}
+
+.fam-con .fam-info li.on {
+    display: block;
+}
+
+.fam-con .fam-info li h5 {
+    font-size: 24px;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.fam-con .fam-info li .txtbox {}
+
+.fam-con .fam-info li .txtbox p {}
+
+.fam-con .fam-info li .txtbox .address {
+    margin-bottom: 15px;
+}
+
+.fam-con .fam-info li .txtbox .time {
+    margin-bottom: 15px;
+}
+
+.fam-con .fam-info li .txtbox .tel {}
+
+/* 전체보기 버튼 */
+.fam-con .btn-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}

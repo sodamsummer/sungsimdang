@@ -1,0 +1,111 @@
+@charset "utf-8";
+
+/* footer */
+
+footer {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    
+    padding: 50px 0 100px;
+    background-color: #FAB12F;
+
+    /* .totop의 기준 */
+    position: relative;
+}
+
+footer .sns {
+    float: right;
+}
+
+footer .sns ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+footer .sns ul li {
+    width: 40px;
+    height: 40px;
+    
+    float: left;
+}
+
+footer .sns ul li~li {
+    margin-left: 40px;
+}
+
+footer .sns ul li.youtube {
+    background: url(/img/site_youtube.png) no-repeat top left/cover;
+}
+
+footer .sns ul li.youtube:hover {
+    background: url(/img/site_youtube.png) no-repeat top right/cover;
+}
+
+footer .sns ul li.facebook {
+    background: url(/img/site_facebook.png) no-repeat top left/cover;
+}
+
+footer .sns ul li.facebook:hover {
+    background: url(/img/site_facebook.png) no-repeat top right/cover;
+}
+
+footer .sns ul li.insta {
+    background: url(/img/site_instagram.png) no-repeat top left/cover;
+}
+
+footer .sns ul li.insta:hover {
+    background: url(/img/site_instagram.png) no-repeat top right/cover;
+}
+
+footer .sns ul li a {
+    display: block;
+    text-indent: -9999px;
+}
+
+footer .copyright {
+    float: left;
+    line-height: 2;
+}
+
+footer .copyright .site {
+    margin-bottom: 20px;
+}
+
+footer .copyright .site li {
+    margin-right: 30px;    
+}
+
+footer .copyright .site li a {
+    display: block;
+    color: rgba(0,0,0,1);
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+footer .copyright .info {
+    /* outline: 2px solid red; */
+    width: 60%;
+
+    color: rgba(0,0,0,0.7);
+    font-size: 14px;
+    font-size: 0.875rem;
+
+    margin-bottom: 30px;
+}
+
+footer .copyright .info li {
+    /* outline: 2px solid red; */
+    margin-right: 30px;
+}
+
+footer .copyright .f-logo {
+    width: 150px;
+}
+
+footer .copyright .f-logo img {
+    width: 100%;
+    display: block;
+}

@@ -1,0 +1,248 @@
+@charset "utf-8";
+
+/* main */
+main {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto 200px;
+
+    height: 100%;
+
+    background: url(/contents/brandstory/img/main0.jpg) no-repeat top/cover;
+}
+main .inner {
+    /* outline: 2px solid orange; */
+    height: 100%;    
+    position: relative; /* h2 , sub-m의 기준 */
+}
+main .m-txt {}
+main h2 {
+    font-family: "Diphylleia", serif;
+    font-size: 64px;
+    font-size: 4rem;
+
+    position: absolute;
+    top: 20%;
+    left: 0;
+
+    margin-bottom: 20px;
+}
+main .sub-m {
+    /* outline: 2px solid red; */
+
+    width: 45%;
+
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+}
+main .sub-m ul {}
+main .sub-m ul .lnb {
+    float: none;    
+    margin-bottom: 10px;
+}
+
+/* --------- */
+main .sub-m ul .lnb::after {
+    content: "";
+    display: block;
+
+    width: 100%;
+    height: 1px;
+    background-color: #FEF3E2;
+
+    margin: 10px 0;    
+}
+main .sub-m ul .lnb:nth-child(3):after {
+    display: none;
+}
+
+/* 초기설정 - .lnb>p 안보이게 */
+main .sub-m ul .lnb p {
+    display: none;
+}
+
+/* on */
+main .sub-m ul li.on h3 a {
+    color: #FAB12F;
+}
+main .sub-m ul li.on p {
+    display: block;
+}
+
+main .sub-m ul .lnb h3 {
+    font-family: "Diphylleia", serif;
+    font-size: 32px;
+    font-size: 2rem;
+
+    margin-bottom: 10px;
+}
+main .sub-m ul .lnb h3 a {
+    color: #fff;
+}
+main .sub-m ul .lnb p {
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+
+/* section */
+section {
+    /* outline: 2px solid red; */        
+}
+section .sec-txt {
+    text-align: center;
+}
+section h4 {
+    font-family: "Diphylleia", serif;
+    font-size: 48px;
+    font-size: 3rem;
+    color: #FEF3E2;
+
+    margin-bottom: 30px;
+}
+section .sec-subtit {
+    font-family: "Noto Serif KR", serif;
+    font-size: 20px;
+    font-size: 1.25rem;
+
+    margin-bottom: 100px;
+}
+section .sec-des {
+    font-weight: 300;
+
+    margin-bottom: 200px;
+}
+
+/* section > content */
+ul.content {
+    /* outline: 2px solid red; */
+    width: 100%;    
+}
+.content li {
+    /* outline: 2px solid orange; */
+
+    width: 100%;    
+
+    margin-bottom: 100px;
+
+    /* h5의 기준 */
+    position: relative;
+}
+.content li::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* 콘텐츠 텍스트 공통 디자인 */
+.content li .con-txt>h5 {
+    font-family: "Diphylleia", serif;
+    font-size: 32px;
+    font-size: 1.5rem;
+    color: #000;
+
+    /* 테이프 */   
+    background: url(/contents/brandstory/img/tape_.png) no-repeat top left;
+}
+.content li .con-txt>p {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+/* 홀수 */
+/* 좌 - 이미지 */
+.content li:nth-child(2n-1) .con-img {
+    width: 49%;
+    margin-right: 2%;
+
+    float: left;
+}
+.content li .con-img img {
+    width: 100%;
+    display: block;
+}
+/* 우 - 텍스트 */
+.content li:nth-child(2n-1) .con-txt {    
+    width: 49%;  
+
+    float: left;    
+}
+.content li:nth-child(2n-1) .con-txt h5 {
+    /* outline: 2px solid red; */
+    padding: 35px 0 35px 50px;    
+
+    /* 테이프 위치 */
+    position: absolute;
+    left: 47%;
+    top: -15px;
+    z-index: -1;      
+
+    width: 300px;
+}
+.content li:nth-child(2n-1) .con-txt p {
+    /* outline: 2px solid green; */   
+
+    position: absolute;
+    bottom: 0;
+    left: 52%;
+}
+
+/* 짝수 */
+/* 우 - 이미지 */
+.content li:nth-child(2n) .con-img {
+    width: 49%;
+    margin-left: 2%;
+
+    float: right;
+}
+/* 좌 - 텍스트 */
+.content li:nth-child(2n) .con-txt {
+    width: 49%;  
+
+    float: right;    
+}
+.content li:nth-child(2n) .con-txt h5 {
+    /* outline: 2px solid red; */
+    padding: 35px 0 35px 45px;    
+
+    /* 테이프 위치 */
+    position: absolute;
+    left: 30%;
+    top: -15px;
+    
+    width: 350px;
+}
+.content li:nth-child(2n) .con-txt p {
+    /* outline: 2px solid green; */
+
+    text-align: right;
+    
+    position: absolute;
+    bottom: 0;
+    right: 52%;
+}
+
+/* 특정 컨텐츠 제목 위치 조절 */
+.content li:nth-child(2) .con-txt h5, .content li:nth-child(10) .con-txt h5, .content li:nth-child(12) .con-txt h5 {
+    padding: 20px 0 20px 45px;
+}
+.content li:nth-child(5) .con-txt h5, .content li:nth-child(7) .con-txt h5, .content li:nth-child(9) .con-txt h5 {
+    padding: 35px 0 35px 35px;
+}
+.content li:nth-child(11) .con-txt h5 {
+    padding: 20px 0 20px 45px;
+}
+
+/* 처음으로 */
+.btn-container {    
+    position: relative;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    margin-bottom: 100px;
+}

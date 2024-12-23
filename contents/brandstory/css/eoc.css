@@ -1,0 +1,283 @@
+@charset "utf-8";
+
+/* main */
+main {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto 200px;
+
+    height: 100%;
+
+    background: url(/contents/brandstory/img/main0.jpg) no-repeat top/cover;
+}
+main .inner {
+    /* outline: 2px solid orange; */
+    height: 100%;    
+    position: relative; /* h2 , sub-m의 기준 */
+}
+main .m-txt {}
+main h2 {
+    font-family: "Diphylleia", serif;
+    font-size: 64px;
+    font-size: 4rem;
+
+    position: absolute;
+    top: 20%;
+    left: 0;
+
+    margin-bottom: 20px;
+}
+main .sub-m {
+    /* outline: 2px solid red; */
+
+    width: 45%;
+
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+}
+main .sub-m ul {}
+main .sub-m ul .lnb {
+    float: none;    
+    margin-bottom: 10px;
+}
+
+/* --------- */
+main .sub-m ul .lnb::after {
+    content: "";
+    display: block;
+
+    width: 100%;
+    height: 1px;
+    background-color: #FEF3E2;
+
+    margin: 10px 0;    
+}
+main .sub-m ul .lnb:nth-child(3):after {
+    display: none;
+}
+
+/* 초기설정 - .lnb>p 안보이게 */
+main .sub-m ul .lnb p {
+    display: none;
+}
+
+/* on */
+main .sub-m ul li.on h3 a {
+    color: #FAB12F;
+}
+main .sub-m ul li.on p {
+    display: block;
+}
+
+main .sub-m ul .lnb h3 {
+    font-family: "Diphylleia", serif;
+    font-size: 32px;
+    font-size: 2rem;
+
+    margin-bottom: 10px;
+}
+main .sub-m ul .lnb h3 a {
+    color: #fff;
+}
+main .sub-m ul .lnb p {
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+
+/* section */
+section {
+    /* outline: 2px solid red; */
+    text-align: center;
+}
+.content {    
+    width: 90%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.content h4 {
+    font-family: "Diphylleia", serif;
+    font-size: 48px;
+    font-size: 3rem;
+    color: #FEF3E2;
+
+    margin-bottom: 100px;
+}
+
+/* ------ */
+/* .content h4::after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+
+    margin-top: 100px;
+
+    width: 10%;
+    height: 1px;
+    background-color: #fff;
+} */
+
+.content>p {
+    font-family: "Noto Serif KR", serif;
+    font-size: 20px;
+    font-size: 1.25rem;
+
+    margin-bottom: 100px;
+}
+
+.content .slogan {
+    /* outline: 2px solid red; */
+    margin-bottom: 200px;
+}
+.content .slogan ul li {
+    width: 23.5%;
+
+    /* li>p의 기준 */
+    position: relative;
+}
+.content .slogan ul li~li {
+    margin-left: 2%
+}
+.content .slogan ul li img {
+    width: 100%;
+    display: block;
+}
+.content .slogan ul li p {
+    color: #000;
+
+    position: absolute;
+    bottom: 1%;
+    left: 1%;
+}
+
+
+
+/* sub-content */
+.sub-content {
+    width: 90%;
+    max-width: 1280px;
+    margin: 0 auto;
+
+    margin-bottom: 100px;
+}
+.sub-content h5 {
+    
+    margin-bottom: 50px;
+    font-weight: 300;
+}
+
+.sub-content>p {
+    font-family: "Diphylleia", serif;
+    font-size: 32px;
+    font-size: 2rem;
+
+    margin-bottom: 100px;
+}
+.sub-content .links {
+    /* outline: 2px solid orange; */
+
+    text-align: left;
+}
+.sub-content .links>p {
+    font-family: "DM Mono", monospace;
+    color: #FAB12F;
+}
+/* ---------- */
+.links>p::after {
+    content: "";
+    display: block;
+    
+    width: 100%;
+    height: 1px;
+    max-width: 1280px;
+    margin: 0 auto;
+
+    margin-top: 10px;
+    
+    background-color: rgba(255,255,255,0.5);
+}
+.sub-content .links h6 {}
+/* ---------- */
+.links>.list::after {
+    content: "";
+    display: block;
+    
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    height: 1px;
+    background-color: rgba(255,255,255,0.5);
+}
+.sub-content .links .list li {
+    /* 초기설정 */
+    display: none;
+
+    float: none;
+    text-align: center;
+    line-height: 3;
+
+    /* .icon의 기준 */
+    position: relative;
+}
+
+/* on */
+.sub-content .links .list li.on {
+    /* 초기설정 */
+    display: block;
+}
+
+.sub-content .links .list li a {
+    color: #fff;    
+
+    font-size: 20px;
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+.sub-content .links .list li:hover a {
+    font-weight: 400;
+}
+.sub-content .links .list li .icon {
+    background: url(/contents/brandstory/img/01_eoc/btn_links.png) no-repeat left;
+    font-size: 0;
+
+    width: 30px;
+    height: 30px;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+.sub-content .links .list li:hover .icon {
+    background-position: right;
+}
+
+/* 영상 자료 */
+.video {
+    margin-bottom: 100px;
+}
+.video p {
+    font-family: "DM Mono", monospace;
+    color: #FAB12F;
+
+    text-align: left;
+
+    width: 90%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 10px;    
+}
+
+/* 사이트 이동 버튼 */
+.site-btn {
+    /* outline: 2px solid red; */
+    display: inline-block;
+
+    margin-bottom: 100px;
+}
+.site-btn ul {}
+.site-btn ul li~li {
+    margin-left: 30px;
+}

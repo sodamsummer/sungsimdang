@@ -1,0 +1,99 @@
+@charset "utf-8";
+
+/* common */
+
+/*
+구글 웹 폰트
+1.  font-family: "Diphylleia", serif;
+    font-weight: 400;
+2.  font-family: "Noto Sans KR", sans-serif;
+    font-weight: 100 ~ 900;
+3.  font-family: "Noto Serif KR", serif;
+    font-weight: 200 ~ 900;
+4. font-family: "DM Mono", monospace;
+    font-weight: 300 ~ 500;
+    
+*/
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    color: #fff;
+    background-color: #000;
+}
+
+/* float 해제 : .clear */
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* 컨텐츠 너비 */
+.inner {
+    width: 90%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* 보이는 화면 기준 */
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+/* - btn 공통 디자인 */
+
+.btn-container {
+    display: inline-block;
+    position: relative;
+}
+
+.btn-container a {
+    padding: 15px 30px;
+    font-weight: 300;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid;
+
+    /* 초기 배경색 */
+    background-color: transparent;
+    
+    /* 자식 요소가 영역을 벗어나지 않도록 */
+    position: relative;
+    overflow: hidden;
+    
+    /* 텍스트 색상 전환 */
+    transition: color 0.3s ease;
+    
+    /* 텍스트가 가려지지 않도록 z-index 설정 */
+    z-index: 1;    
+}
+
+.btn-container a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FAB12F;
+
+    /* 초기 상태에서 배경이 보이지 않도록 */
+    transform: scaleY(0);
+
+    /* 아래에서 위로 차오르는 효과 */
+    transform-origin: bottom;
+    
+    /* 배경 전환 애니메이션 */
+    transition: transform 0.4s ease;    
+
+    /* 배경이 텍스트 아래로 가도록 z-index 설정 */
+    z-index: -1;    
+}
+
+.btn-container a:hover::after {
+    /* hover 시 배경이 아래에서 위로 차오르도록 */
+    transform: scaleY(1);    
+}

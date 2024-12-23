@@ -1,0 +1,146 @@
+@charset "utf-8";
+
+/* header */
+
+header {
+    width: 100%;
+
+    background-color: rgba(0, 0, 0, 0.3);
+    /* background-color: rgba(255,255,255,0); */
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+    transition: transform .3s ease-in-out;
+}
+
+.menu {
+    /* outline: 2px solid red; */
+
+    width: 90%;
+    max-width: 1280px;
+    margin: 0 auto;
+
+    height: 80px;
+}
+
+.menu::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* 메인로고 */
+.menu h1.m-logo {
+    float: left;
+    width: 20%;
+}
+
+.menu h1.m-logo a {
+    display: block;
+
+    font-family: "Diphylleia", serif;
+    font-size: 40px;
+    font-size: 2.5rem;
+    color: #fff;
+    line-height: 80px;
+}
+
+/* 대메뉴 */
+.menu nav.gnb {
+    /* outline: 2px solid orange;  */
+
+    float: right;
+    width: 80%;
+
+    text-align: center;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 80px;
+}
+
+.menu nav.gnb ul {
+    width: 100%;
+}
+
+.menu nav.gnb>ul>li {
+    width: 20%;
+
+    position: relative;
+    /* ul.lnb의 기준 */
+}
+
+/* .gnb 호버 디자인 */
+.menu nav.gnb>ul>li:hover ul.lnb {
+    display: block;
+}
+
+.menu nav.gnb>ul>li:hover::after {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 100px;
+}
+
+.menu nav.gnb>ul>li::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 1px;
+    background-color: #FAB12F;
+
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    transition: width 0.4s ease, left 0.4s ease;
+}
+
+.menu nav.gnb>ul>li>a {
+    color: #fff;
+}
+
+.menu nav.gnb ul li:hover a {
+    color: #FAB12F;
+    font-weight: 400;
+}
+
+/* lnb */
+.menu nav.gnb ul>li ul.lnb {
+
+    display: none;
+
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #000;
+
+    width: 100px;
+    padding: 10px;
+
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu nav.gnb ul>li ul.lnb>li {
+    float: none;
+}
+
+.menu nav.gnb ul>li ul.lnb>li>a {
+    display: block;
+
+    color: #000;
+    font-weight: 400;
+    line-height: 2;
+}
+
+.menu nav.gnb ul>li ul.lnb>li>a:hover {
+    font-weight: 600;
+}

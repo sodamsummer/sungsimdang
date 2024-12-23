@@ -10,12 +10,16 @@ main {
 
     background: url(../img/main0.jpg) no-repeat top/cover;
 }
+
 main .inner {
     /* outline: 2px solid orange; */
-    height: 100%;    
-    position: relative; /* h2 , sub-m의 기준 */
+    height: 100%;
+    position: relative;
+    /* h2 , sub-m의 기준 */
 }
+
 main .m-txt {}
+
 main h2 {
     font-family: "Diphylleia", serif;
     font-size: 64px;
@@ -27,6 +31,7 @@ main h2 {
 
     margin-bottom: 20px;
 }
+
 main .sub-m {
     /* outline: 2px solid red; */
 
@@ -36,9 +41,11 @@ main .sub-m {
     bottom: 10%;
     left: 0;
 }
+
 main .sub-m ul {}
+
 main .sub-m ul .lnb {
-    float: none;    
+    float: none;
     margin-bottom: 10px;
 }
 
@@ -51,8 +58,9 @@ main .sub-m ul .lnb::after {
     height: 1px;
     background-color: #FEF3E2;
 
-    margin: 10px 0;    
+    margin: 10px 0;
 }
+
 main .sub-m ul .lnb:nth-child(3):after {
     display: none;
 }
@@ -66,6 +74,7 @@ main .sub-m ul .lnb p {
 main .sub-m ul li.on h3 a {
     color: #FAB12F;
 }
+
 main .sub-m ul li.on p {
     display: block;
 }
@@ -77,9 +86,11 @@ main .sub-m ul .lnb h3 {
 
     margin-bottom: 10px;
 }
+
 main .sub-m ul .lnb h3 a {
     color: #fff;
 }
+
 main .sub-m ul .lnb p {
     font-size: 16px;
     font-size: 1rem;
@@ -92,16 +103,22 @@ section {
     /* outline: 2px solid red; */
     text-align: center;
 }
-.content {    
+
+.content {
     width: 90%;
     max-width: 1280px;
     margin: 0 auto;
 }
+
 .content h4 {
     font-family: "Diphylleia", serif;
     font-size: 48px;
     font-size: 3rem;
     color: #FEF3E2;
+
+    /* 초기 설정 */
+    opacity: 0;
+    transition: opacity 1s;
 
     margin-bottom: 100px;
 }
@@ -119,7 +136,7 @@ section {
     background-color: #fff;
 } */
 
-.content>p {
+.content .txtbox {
     font-family: "Noto Serif KR", serif;
     font-size: 20px;
     font-size: 1.25rem;
@@ -127,23 +144,34 @@ section {
     margin-bottom: 100px;
 }
 
+.content .txtbox p {
+    /* 초기 설정 */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+
 .content .slogan {
     /* outline: 2px solid red; */
     margin-bottom: 200px;
 }
+
 .content .slogan ul li {
     width: 23.5%;
 
     /* li>p의 기준 */
     position: relative;
 }
+
 .content .slogan ul li~li {
     margin-left: 2%
 }
+
 .content .slogan ul li img {
     width: 100%;
     display: block;
 }
+
 .content .slogan ul li p {
     color: #000;
 
@@ -162,8 +190,9 @@ section {
 
     margin-bottom: 100px;
 }
+
 .sub-content h5 {
-    
+
     margin-bottom: 50px;
     font-weight: 300;
 }
@@ -175,41 +204,47 @@ section {
 
     margin-bottom: 100px;
 }
+
 .sub-content .links {
     /* outline: 2px solid orange; */
 
     text-align: left;
 }
+
 .sub-content .links>p {
     font-family: "DM Mono", monospace;
     color: #FAB12F;
 }
+
 /* ---------- */
 .links>p::after {
     content: "";
     display: block;
-    
+
     width: 100%;
     height: 1px;
     max-width: 1280px;
     margin: 0 auto;
 
     margin-top: 10px;
-    
-    background-color: rgba(255,255,255,0.5);
+
+    background-color: rgba(255, 255, 255, 0.5);
 }
+
 .sub-content .links h6 {}
+
 /* ---------- */
 .links>.list::after {
     content: "";
     display: block;
-    
+
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
     height: 1px;
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255, 255, 255, 0.5);
 }
+
 .sub-content .links .list li {
     /* 초기설정 */
     display: none;
@@ -229,15 +264,17 @@ section {
 }
 
 .sub-content .links .list li a {
-    color: #fff;    
+    color: #fff;
 
     font-size: 20px;
     font-size: 1.25rem;
     font-weight: 300;
 }
+
 .sub-content .links .list li:hover a {
     font-weight: 400;
 }
+
 .sub-content .links .list li .icon {
     background: url(../img/01_eoc/btn_links.png) no-repeat left;
     font-size: 0;
@@ -250,6 +287,7 @@ section {
     transform: translateY(-50%);
     right: 0;
 }
+
 .sub-content .links .list li:hover .icon {
     background-position: right;
 }
@@ -258,6 +296,7 @@ section {
 .video {
     margin-bottom: 100px;
 }
+
 .video p {
     font-family: "DM Mono", monospace;
     color: #FAB12F;
@@ -267,7 +306,7 @@ section {
     width: 90%;
     max-width: 1280px;
     margin: 0 auto;
-    margin-bottom: 10px;    
+    margin-bottom: 10px;
 }
 
 /* 사이트 이동 버튼 */
@@ -277,7 +316,9 @@ section {
 
     margin-bottom: 100px;
 }
+
 .site-btn ul {}
+
 .site-btn ul li~li {
     margin-left: 30px;
 }

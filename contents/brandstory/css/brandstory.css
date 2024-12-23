@@ -51,8 +51,8 @@ main h2::after {
 }
 
 main p {
-    font-size: 16px;
-    font-size: 1rem;
+    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 300;
     letter-spacing: 1.2px;
 

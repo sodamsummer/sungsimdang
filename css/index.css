@@ -333,8 +333,8 @@ p.caption:hover a {
 
     /* 배경이미지 높이 기준 */
     height: 715px;
-
-    background: url(/sungsimdang/img/ourway__color.jpg);
+    
+    background: url(/sungsimdang/img/ourway__color.jpg); /* 절대경로 */
 
     float: right;
 }
@@ -552,22 +552,22 @@ p.caption:hover a {
 }
 
 .fam-con .fam-arrow a.prev {
-    background: url(/sungsimdang/img/btn_prev_.png) no-repeat left/cover;
+    background: url(/sungsimdang/img/btn_prev_.png) no-repeat left/cover; /* 절대경로 */
 }
 
 /* hover했을 때, .clicked */
 .fam-con .fam-arrow a.prev:hover, .fam-con .fam-arrow a.prev.clicked {
-    background: url(/sungsimdang/img/btn_prev_.png) no-repeat right/cover;
+    background: url(/sungsimdang/img/btn_prev_.png) no-repeat right/cover; /* 절대경로 */
 }
 
 .fam-con .fam-arrow a.next {
-    background: url(/sungsimdang/img/btn_next_.png) no-repeat left/cover;
+    background: url(/sungsimdang/img/btn_next_.png) no-repeat left/cover; /* 절대경로 */
     margin-left: 15px;
 }
 
 /* hover했을 때, .clicked */
 .fam-con .fam-arrow a.next:hover, .fam-con .fam-arrow a.next.clicked {
-    background: url(/sungsimdang/img/btn_next_.png) no-repeat right/cover;
+    background: url(/sungsimdang/img/btn_next_.png) no-repeat right/cover; /* 절대경로 */
 }
 
 

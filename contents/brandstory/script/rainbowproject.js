@@ -1,6 +1,6 @@
-//eoc.js
+//rainbowproject.js
 
-$(function () {
+$(function(){
 
     // header
     // 1. 스크롤 내릴 때 사라지기 2. 스크롤 올릴 때 나타나기
@@ -25,4 +25,24 @@ $(function () {
 
     }); // scroll() 이벤트 끝
 
+    //1) 리스트(li a)를 클릭했을 때
+    $('.rainbow_list>li>a').click(function(e){
+
+        e.preventDefault();
+
+        var modalId = $(this).attr('href');
+
+        //2) 모달 창(#content)이 열리면서
+        $('#content').show(0);
+
+        //3) 컨텐츠가 보여짐 >> #modal의 display 상태 변경
+        $('#modal').show(0);
+        $(modalId).show(0);
+    });
+
+    // modal창 닫기
+    $('#modal').click(function(){
+        $(this).hide();
+        $('#content').hide();
+    });
 });

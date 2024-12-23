@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="../../css/footer.css">
 
     <script src="script/jquery-1.12.4.min.js"></script>
+    <script src="script/rainbowproject.js"></script>
 </head>
 
 <body>
@@ -81,21 +82,23 @@
     <!-- section -->
     <section>
         <div class="inner">
-            <h4>무지개 프로젝트</h4>
-            <p>모두가 모두를 위해 - EoC 기업의 구체적 실천방안</p>
+            <div class="sec-txt">
+                <h4>무지개 프로젝트</h4>
+                <p class="sec-subtit">모두가 모두를 위해 - EoC 기업의 구체적 실천방안</p>
+            </div>
 
             <ul class="rainbow_list">
-                <li><a href="#red">재화를 통해 올바른 경제활동을 한다.</a></li>
-                <li><a href="#">우리는 성심인이다.</a></li>
-                <li><a href="#">법과 윤리기준을 지킨다.</a></li>
-                <li><a href="#">정직한 재료와 환경보호로 인간의 존엄성을 지킨다.</a></li>
-                <li><a href="#">조화롭고 따뜻한 가정과 같은 환경을 조성한다.</a></li>
-                <li><a href="#">자신의 분야에서 전문가가 된다.</a></li>
-                <li><a href="#">성심가족으로 생각의 일치와 공유를 이룬다.</a></li>
+                <li class="red"><a href="#red">재화를 통해 올바른 경제활동을 한다.</a></li>
+                <li class="orange"><a href="#orange">우리는 성심인이다.</a></li>
+                <li class="yellow"><a href="#yellow">법과 윤리기준을 지킨다.</a></li>
+                <li class="green"><a href="#green">정직한 재료와 환경보호로 인간의 존엄성을 지킨다.</a></li>
+                <li class="blue"><a href="#blue">조화롭고 따뜻한 가정과 같은 환경을 조성한다.</a></li>
+                <li class="navy"><a href="#navy">자신의 분야에서 전문가가 된다.</a></li>
+                <li class="violet"><a href="#violet">성심가족으로 생각의 일치와 공유를 이룬다.</a></li>
             </ul>
 
-            <div class="modal">
-                <ul>
+            <div class="modal" id="modal">
+                <ul id="modal" id="content">
                     <li id="red">
                         <div class="exit">
                             <span></span>
@@ -104,10 +107,15 @@
 
                         <h5>RED</h5>
                         <h6>재화를 통해 올바른 경제활동을 한다.</h6>
+                        <p>
+                            EoC 기업으로 보편적인 형제애를 지닌 나눔의 문화를 이룬다.<br>
+                            정확한 자재/구매/포스 관리로 회사의 재산을 올바르게 사용한다.<br>
+                            투명한 회계 관리와 정직한 납세를 통해 서로
+                            신뢰한다.
+                        </p>
                         <div class="modal-img">
-                            <img src="" alt="">
+                            <img src="img/03_rainbow/rainbow_red.jpg" alt="재화를 통해 올바른 경제활동을 한다.">
                         </div>
-                        <p>EoC 기업으로 보편적인 형제애를 지닌 나눔의 문화를 이룬다.정확한 자재/구매/포스 관리로 회사의 재산을 올바르게 사용한다.투명한 회계 관리와 정직한 납세를 통해 서로 신뢰한다.</p>
                     </li>
 
                     <li id="orange">
@@ -117,28 +125,35 @@
                         </div>
 
                         <h5>ORANGE</h5>
-                        <h6>우리는 성심인이다.</h6>
+                        <h6>우리는 성심인이다.</h6>                        
+                        <p>
+                            모든 이가 다 좋게 여기는 일을 하도록 한다.<br>
+                            서로 사랑하며 사랑의 문화를 확산시킨다.<br>
+                            지역사회에 봉사하며 가치있는 기업이 된다.
+                        </p>
                         <div class="modal-img">
-                            <img src="" alt="">
+                            <img src="img/03_rainbow/rainbow_orange.jpg" alt="우리는 성심인이다.">
                         </div>
-                        <p>모든 이가 다 좋게 여기는 일을 하도록 한다.서로 사랑하며 사랑의 문화를 확산시킨다.지역사회에 봉사하며 가치있는 기업이 된다.</p>
                     </li>
 
-                    <li>
+                    <li id="yellow">
                         <div class="exit">
                             <span></span>
                             <span></span>
                         </div>
 
                         <h5>YELLOW</h5>
-                        <h6>법과 윤리기준을 지킨다.</h6>
+                        <h6>법과 윤리기준을 지킨다.</h6>                        
+                        <p>
+                            기업 경영에 관련된 책임과 정직성을 지닌다.<br>
+                            회사 정관에 따른 사내 규정을 지킨다.<br>
+                            나라의 법규를 지킨다. (식품위생법, 소방법, 근로기준법, 도로교통법 등)</p>
                         <div class="modal-img">
-                            <img src="" alt="">
+                            <img src="img/03_rainbow/rainbow_yellow.jpg" alt="법과 윤리기준을 지킨다.">
                         </div>
-                        <p>기업 경영에 관련된 책임과 정직성을 지닌다.회사 정관에 따른 사내 규정을 지킨다.나라의 법규를 지킨다. (식품위생법, 소방법, 근로기준법, 도로교통법 등)</p>
                     </li>
 
-                    <li>
+                    <li id="green">
                         <div class="exit">
                             <span></span>
                             <span></span>
@@ -147,51 +162,67 @@
                         <h5>GREEN</h5>
                         <h6>정직한 재료와 환경보호로 인간의 존엄성을 지킨다.</h6>
                         <div class="modal-img">
-                            <img src="" alt="">
-                        </div>
-                        <p>로컬푸드를 이용하여 지역경제와 환경보호에 참여한다.친환경 포장재를 사용하고 일회용품 최소화로 쓰레기를 줄인다.성심인의 친교를 위한 연1회 한가족캠프를 진행한다.직원들의 건강을 위해 휴식시간과 맛있는 식사를 준비한다.</p>
+                            <img src="img/03_rainbow/rainbow_green.jpg" alt="정직한 재료와 환경보호로 인간의 존엄성을 지킨다.">
+                        </div>  
+                        <p>
+                            로컬푸드를 이용하여 지역경제와 환경보호에 참여한다.<br>
+                            친환경 포장재를 사용하고 일회용품 최소화로 쓰레기를 줄인다.<br>
+                            성심인의 친교를 위한 연1회 한가족캠프를 진행한다.
+                        </p>                                              
                     </li>
 
-                    <li>
+                    <li id="blue">
                         <div class="exit">
                             <span></span>
                             <span></span>
                         </div>
 
                         <h5>BLUE</h5>
-                        <h6>조화롭고 따뜻한 가정과 같은 환경을 조성한다.</h6>
+                        <h6>조화롭고 따뜻한 가정과 같은 환경을 조성한다.</h6>                        
+                        <p>
+                            성심인의 미소는 성심당의 유니폼이다.<br>
+                            아름답고 조화로운 매장에서 따뜻한 가정의 분위기를 이룬다.<br>
+                            정리정돈을 통해 쾌적한 작업환경을 이룬다.
+                        </p>
                         <div class="modal-img">
-                            <img src="" alt="">
+                            <img src="img/03_rainbow/rainbow_blue.jpg" alt="조화롭고 따뜻한 가정과 같은 환경을 조성한다.">
                         </div>
-                        <p>성심인의 미소는 성심당의 유니폼이다.아름답고 조화로운 매장에서 따뜻한 가정의 분위기를 이룬다.정리정돈을 통해 쾌적한 작업환경을 이룬다.</p>
                     </li>
 
-                    <li>
+                    <li id="navy">
                         <div class="exit">
                             <span></span>
                             <span></span>
                         </div>
 
                         <h5>NAVY</h5>
-                        <h6>자신의 분야에서 전문가가 된다.</h6>
-                        <div class="modal-img">
-                            <img src="" alt="">
-                        </div>
-                        <p>자신의 직무에 있어 전문가가 되기 위해 공부한다.자신의 능력이 동료와 후배, 회사에 도움이 되도록 한다.국내외 연수, 세미나, 벤치마킹을 통해 아이디어와 창의성을 키운다.</p>
+                        <h6>자신의 분야에서 전문가가 된다.</h6>                        
+                        <p>
+                            자신의 직무에 있어 전문가가 되기 위해 공부한다.<br>
+                            자신의 능력이 동료와 후배, 회사에 도움이 되도록 한다.<br>
+                            국내외 연수, 세미나, 벤치마킹을 통해 아이디어와 창의성을
+                            키운다.</p>
+                            <div class="modal-img">
+                                <img src="img/03_rainbow/rainbow_navy.jpg" alt="자신의 분야에서 전문가가 된다.">
+                            </div>
                     </li>
 
-                    <li>
+                    <li id="violet">
                         <div class="exit">
                             <span></span>
                             <span></span>
                         </div>
 
                         <h5>VIOLET</h5>
-                        <h6>성심가족으로 생각의 일치와 공유를 이룬다.</h6>
+                        <h6>성심가족으로 생각의 일치와 공유를 이룬다.</h6>                        
+                        <p>
+                            한가족신문을 통해 회사와 동료의 소식을 공유하며 소통한다.<br>
+                            눈 맞으면 인사하고 존칭어를 사용한다.<br>
+                            SNS를 활용하여 빠르게 소통하며 한가족이 되어간다.
+                        </p>
                         <div class="modal-img">
-                            <img src="" alt="">
+                            <img src="img/03_rainbow/rainbow_violet.png" alt="성심가족으로 생각의 일치와 공유를 이룬다.">
                         </div>
-                        <p>한가족신문을 통해 회사와 동료의 소식을 공유하며 소통한다.눈 맞으면 인사하고 존칭어를 사용한다.SNS를 활용하여 빠르게 소통하며 한가족이 되어간다.</p>
                     </li>
                 </ul>
             </div>

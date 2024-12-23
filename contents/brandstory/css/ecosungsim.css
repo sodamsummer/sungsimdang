@@ -89,7 +89,8 @@ main .sub-m ul .lnb p {
 
 /* section */
 section {
-    /* outline: 2px solid red; */        
+    /* outline: 2px solid red; */
+    width: 100%; 
 }
 section .sec-txt {
     text-align: center;
@@ -106,6 +107,7 @@ section .sec-subtit {
     font-family: "Noto Serif KR", serif;
     font-size: 20px;
     font-size: 1.25rem;
+    font-weight: 300;
 
     margin-bottom: 100px;
 }

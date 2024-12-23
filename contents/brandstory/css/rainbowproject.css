@@ -85,3 +85,214 @@ main .sub-m ul .lnb p {
     font-size: 1rem;
     font-weight: 300;
 }
+
+
+/* section */
+section {
+    width: 100%;
+}
+.sec-txt {
+    text-align: center;
+}
+.sec-txt h4 {
+    font-family: "Diphylleia", serif;
+    font-size: 48px;
+    font-size: 3rem;
+    color: #FEF3E2;
+
+    margin-bottom: 50px;
+}
+.sec-txt p.sec-subtit {
+    font-family: "Noto Serif KR", serif;
+    font-size: 20px;
+    font-size: 1.25rem;
+    font-weight: 300;
+
+    margin-bottom: 150px;
+}
+
+ul.rainbow_list {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    
+    margin-bottom: 100px;
+}
+ul.rainbow_list li {
+    float: none;
+
+    opacity: 0.5;
+    border: 1px solid;
+    border-radius: 50px;
+
+    margin-bottom: 15px;
+}
+ul.rainbow_list li:hover {
+    /* color:#FAB12F; */
+    opacity: 1;
+}
+.red:hover, .red:hover a {
+    color: red;
+}
+.orange:hover, .orange:hover a {
+    color: #ff5e00;
+}
+.yellow:hover, .yellow:hover a {
+    color: #ff9d00;
+}
+.green:hover, .green:hover a {
+    color: #1ec03e;
+}
+.blue:hover, .blue:hover a {
+    color: #348bee;
+}
+.navy:hover, .navy:hover a {
+    color: #1c47bd;
+}
+.violet:hover, .violet:hover a {
+    color: #7628db;
+}
+
+ul.rainbow_list li a {
+    color: #fff;
+    padding: 10px 0;
+
+    font-family: "Noto Serif KR", serif;
+    font-size: 20px;
+    font-size: 1.25rem;
+}
+
+/* modal 실행 css */
+#modal {     
+    background-color: #000;
+
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+
+    position: fixed; /* #content의 기준 */
+    left: 0;
+    top: 0;
+    z-index: 999;
+
+    margin-bottom: 200px;
+
+    display: none;
+}
+
+#content {
+    width: 100%;
+    height: 100%;
+    
+    position: absolute;   
+
+    display: none;
+}
+
+div.modal ul li {
+    width: 1200px;
+    margin: 0 auto;
+
+    border: 1px solid red;
+    background-color: #000;
+    border-radius: 50px;
+    box-sizing: border-box;
+    padding: 50px 10px;
+    text-align: center;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: none;
+}
+div.modal ul li h5 {     
+    font-size: 32px;
+    font-size: 2rem;
+    display: inline-block;
+
+    background-color: red;
+    border-radius: 50px;
+    padding: 0 20px;
+
+    margin-bottom: 20px;
+}
+div.modal ul li h6 {
+    font-family: "Diphylleia", serif;
+    font-size: 28px;
+    font-size: 1.75rem;
+
+    margin-bottom: 30px;
+}
+div.modal ul li h6::after {
+    content: "";
+    display: block;
+    margin: 30px auto 0;
+
+    width: 20%;
+    height: 2px;
+    background-color: red;
+}
+div.modal ul li .modal-img {
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+}
+div.modal ul li .modal-img img {
+    width: 100%;
+    display: block;
+}
+div.modal ul li p {
+    font-weight: 300;
+    font-size: 1rem;
+
+    margin-bottom: 30px;
+}
+
+/* x */
+div.modal ul li .exit {}
+div.modal ul li .exit span {}
+
+#orange {
+    border-color: #ff5e00;
+}
+#orange h5, #orange h6::after {
+    background-color: #ff5e00;
+}
+
+#yellow {
+    border-color: #ff9d00;
+}
+#yellow h5, #yellow h6::after {
+    background-color: #ff9d00;
+}
+
+#green {
+    border-color: #1ec03e;
+}
+#green h5, #green h6::after {
+    background-color: #1ec03e;
+}
+
+#blue {
+    border-color: #348bee;
+}
+#blue h5, #blue h6::after {
+    background-color: #348bee;
+}
+
+#navy {
+    border-color: #1c47bd;
+}
+#navy h5, #navy h6::after {
+    background-color: #1c47bd;
+}
+
+#violet {
+    border-color: #7628db;
+}
+#violet h5, #violet h6::after {
+    background-color: #7628db;
+}

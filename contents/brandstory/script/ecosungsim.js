@@ -1,4 +1,4 @@
-//eoc.js
+//ecosungsim.js
 
 $(function () {
 

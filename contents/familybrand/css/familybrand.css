@@ -1,0 +1,90 @@
+@charset "utf-8";
+
+/* main */
+main {
+    width: 100%;
+    /* max-width: 1920px; */
+    /* margin: 0 auto 200px; */
+    margin: 0 auto;
+
+    height: 100%;
+
+    background: url(../img/main.jpg) no-repeat top/cover;
+}
+
+main .inner {
+    /* outline: 2px solid orange; */
+    height: 100%;
+    position: relative;
+    /* h2 , sub-m의 기준 */
+}
+
+main .m-txt {
+    /* outline: 2px solid red; */
+
+    position: absolute;
+    top: 40%;
+    left: 0;
+}
+
+main h2 {
+    font-family: "Diphylleia", serif;
+    font-size: 64px;
+    font-size: 4rem;
+
+    margin-bottom: 50px;
+
+    /* animation */
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: slideDown 1.5s forwards;
+}
+
+main h2::after {
+    content: "";
+    display: block;
+
+    width: 100px;
+    height: 1px;
+    background-color: #fff;
+
+    margin-top: 50px;
+}
+
+main p {
+    font-size: 20px;
+    font-size: 1.25rem;
+    font-weight: 300;
+    letter-spacing: 1.2px;
+
+    /* animation */
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUp 1.5s forwards;
+    /* animation-delay: 0.3s;  */
+}
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+

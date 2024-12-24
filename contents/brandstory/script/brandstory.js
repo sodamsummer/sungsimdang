@@ -42,24 +42,32 @@ $(document).ready(function () {
 
             // 사진이 나타난 후, h3이 나타나게 설정
             setTimeout(function () {
-                $('.content>.con-txt>h3').css('opacity', '1'); // 텍스트 나타남
+                $('.content>.con-txt>h3').css('opacity', '1'); // 텍스트(h3) 나타남
             }, 500); // 사진 등장 후 0.5초 뒤
+
+            setTimeout(function () {
+                $('.content>.con-txt>p').css('opacity', '1'); // 텍스트(p) 나타남
+            }, 1000); // 사진 등장 후 1초 뒤
         }
 
         // 스크롤 값이 600px 이상일 때
-        if (scroll > 600) {
+        /* if (scroll > 600) {
             $('.content>.con-txt>p').css('opacity', '1');
-        }        
+        }    */     
 
         // 스크롤 값이 1000px 이상일 때
         if (scroll > 1000) {
             $('.sub-content>.con-img').css('opacity', '1');
+
+            setTimeout(function () {
+                $('.sub-content>.con-txt>p').css('opacity', '1'); // 텍스트 나타남
+            }, 500); // 사진 등장 후 0.5초 뒤
         }
 
-        // 스크롤 값이 1300px 이상일 때
+        /* // 스크롤 값이 1300px 이상일 때
         if (scroll > 1300) {
             $('.sub-content>.con-txt>p').css('opacity', '1'); // 사진 나타남
-        }
+        } */
 
     });
 

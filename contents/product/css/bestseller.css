@@ -90,23 +90,24 @@ main p {
 
 /* section */
 section {
+    width: 100%;    
+}
+
+.list {
+    width: 100%;
+    background-color: #5D4F44;
+
+    margin-bottom: 100px;
+}
+
+.list ul {
     width: 90%;
     max-width: 1280px;
     margin: 0 auto;
 }
 
-.list {
-    width: 100%;
-
-    margin-bottom: 50px;
-}
-
-.list ul {
-    width: 50%;
-}
-
 /* ---- */
-.list::after {
+/* .list::after {
     content: "";
     display: block;
 
@@ -115,25 +116,32 @@ section {
     background-color: rgba(255,255,255,0.5);
 
     margin-bottom: 50px;
-}
+} */
 
 .list ul li {
     /* outline: 2px solid red; */
     width: 25%;
     text-align: center;
+    background-color: #68594C;
 
     position: relative;
     /* li::after의 기준 */
 }
 
+.list ul li.on {
+    background-color: #847061;
+}
+
 .list ul li.on a {
     color: #FAB12F;
+    font-weight: 400;
 }
 
 .list ul li a {
     display: block;
     color: #fff;
-    line-height: 80px;
+    line-height: 65px;
+    font-weight: 300;
 }
 
 /* .list li 호버 디자인 */
@@ -141,7 +149,11 @@ section {
     color: #FAB12F;
 }
 
-.list ul li:hover::after {
+.list ul li:hover {
+    background-color: #847061;
+}
+
+/* .list ul li:hover::after {
     content: "";
     display: block;
     width: 100px;
@@ -152,10 +164,14 @@ section {
     bottom: 30%;
     left: 50%;
     transform: translateX(-50%);
-}
+} */
 
 /* .content */
 .content {
+    width: 90%;
+    max-width: 1280px;
+    margin: 0 auto;
+
     /* .con-tit의 기준 */
     position: relative;
 
@@ -227,5 +243,4 @@ section {
     transition: all 0.7s;
 }
 
-.content ul.product li a p {    
-}
+.content ul.product li a p {}

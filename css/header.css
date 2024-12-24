@@ -5,8 +5,9 @@
 header {
     width: 100%;
 
-    background-color: rgba(0, 0, 0, 0.3);
-    /* background-color: rgba(255,255,255,0); */
+    background-color: rgba(0, 0, 0, 0.0);
+    /* background-color: rgba(255,255,255,1); */    
+    /* background-color: #333; */
 
     position: fixed;
     top: 0;
@@ -14,6 +15,15 @@ header {
     z-index: 999;
 
     transition: transform .3s ease-in-out;
+}
+
+header::after {
+    content: "";
+    display: block;
+
+    height: 1px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.5);
 }
 
 .menu {
@@ -44,13 +54,17 @@ header {
     font-family: "Diphylleia", serif;
     font-size: 40px;
     font-size: 2.5rem;
-    color: #fff;
+    color: rgba(255,255,255,0.7);
     line-height: 80px;
+}
+
+.menu h1.m-logo a:hover {
+    color: rgba(255,255,255,1);
 }
 
 /* 대메뉴 */
 .menu nav.gnb {
-    /* outline: 2px solid orange;  */
+    /* outline: 2px solid orange; */ 
 
     float: right;
     width: 80%;
@@ -80,22 +94,22 @@ header {
 
 .menu nav.gnb>ul>li:hover::after {
     position: absolute;
-    bottom: 30%;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
 
-    width: 100px;
+    width: 70%;
 }
 
 .menu nav.gnb>ul>li::after {
     content: "";
     display: block;
     width: 0;
-    height: 1px;
+    height: 3px;
     background-color: #FAB12F;
 
     position: absolute;
-    bottom: 30%;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
 
@@ -103,7 +117,8 @@ header {
 }
 
 .menu nav.gnb>ul>li>a {
-    color: #fff;
+    color: rgba(255,255,255,0.7);
+    /* color: #333; */
 }
 
 .menu nav.gnb ul li:hover a {
@@ -116,31 +131,32 @@ header {
 
     display: none;
 
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px #000;
+    background-color: rgba(255,255,255,0.7);
+    /* border-radius: 10px; */
+    /* box-shadow: 0 2px 5px #000; */
 
-    width: 100px;
-    padding: 10px;
+    width: 70%;
+    /* padding: 10px; */
 
     position: absolute;
-    top: 80%;
+    top: 100%;
     left: 50%;
     transform: translateX(-50%);
 }
 
 .menu nav.gnb ul>li ul.lnb>li {
-    float: none;
+    float: none;    
 }
 
 .menu nav.gnb ul>li ul.lnb>li>a {
     display: block;
+    padding: 15px 30px;
 
     color: #000;
     font-weight: 400;
-    line-height: 2;
+    line-height: 1.5;
 }
 
-.menu nav.gnb ul>li ul.lnb>li>a:hover {
-    font-weight: 600;
+.menu nav.gnb ul>li ul.lnb>li:hover {
+    background-color: #FAB12F;
 }

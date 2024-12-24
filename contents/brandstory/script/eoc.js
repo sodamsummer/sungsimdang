@@ -28,25 +28,37 @@ $(function () {
         // section
         // 1. 스크롤바가 수직으로 이동한 위치값 반환
         var scroll = $(window).scrollTop();
-        console.log(scroll); // 300 - h4 / 400,425 - p 등장
-
-        // scroll === 300
+        console.log(scroll); // 300 - 등장
 
         // 스크롤 값이 300px 이상일 때
-
         if (scroll > 300) {
             $('.content>.txtbox>h4').css('opacity', '1');
+
+            setTimeout(function () {
+                $('.content>.txtbox>p').first().css('opacity', '1'); // 텍스트(p) 첫번째 줄
+            }, 500); // h4 등장 후 0.5초 뒤
+    
+            setTimeout(function () {
+                $('.content>.txtbox>p').last().css('opacity', '1'); // 텍스트(p) 두번째 줄
+            }, 1000); // h4 등장 후 1초 뒤
         }
 
-        // 스크롤 값이 400px 이상일 때
-        if (scroll > 400) {
-            $('.content>.txtbox>p').first().css('opacity', '1');
+        // 스크롤 값이 600px 이상일 때
+        if (scroll > 600) {
+            $('#s1').css('opacity', '1');
 
-            // 첫번째 줄 등장 후, 두번째 줄 등장
             setTimeout(function () {
-                $('.content>.txtbox>p').last().css('opacity', '1');
-            }, 300); // 첫번째 줄 등장 후 0.3초 뒤
-        } 
+                $('#s2').css('opacity', '1');
+            }, 300);
+
+            setTimeout(function () {
+                $('#s3').css('opacity', '1');
+            }, 600);
+
+            setTimeout(function () {
+                $('#s4').css('opacity', '1');
+            }, 900);
+        }
         
     }); // scroll() 이벤트 끝
 

@@ -101,13 +101,13 @@ main .sub-m ul .lnb p {
 /* section */
 section {
     /* outline: 2px solid red; */
-    width: 100%;
-    text-align: center;
+    width: 100%;    
 }
 
 .con-list {
     width: 100%;
     background-color: #5D4F44;
+    text-align: center;
 
     margin-bottom: 100px;
 }
@@ -121,7 +121,7 @@ section {
 .con-list ul li {
     /* outline: 2px solid red; */
     width: 33.33%;
-    text-align: center;
+    /* text-align: center; */
     background-color: #68594C;
 
     position: relative;
@@ -172,23 +172,11 @@ section {
     margin-bottom: 100px;
 }
 
-/* ------ */
-/* .content h4::after {
-    content: "";
-    display: block;
-    margin: 0 auto;
-
-    margin-top: 100px;
-
-    width: 10%;
-    height: 1px;
-    background-color: #fff;
-} */
-
 .content .txtbox {
     font-family: "Noto Serif KR", serif;
     font-size: 20px;
     font-size: 1.25rem;
+    text-align: center;
 
     margin-bottom: 100px;
 }
@@ -208,8 +196,22 @@ section {
 .content .slogan ul li {
     width: 23.5%;
 
-    /* li>p의 기준 */
-    position: relative;
+    /* 초기 설정 */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.content .slogan ul li .imgbox {
+    overflow: hidden;
+}
+
+.content .slogan ul li:hover img {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.content .slogan ul li:hover p {
+    color: rgba(255,255,255,1);
 }
 
 .content .slogan ul li~li {
@@ -219,14 +221,14 @@ section {
 .content .slogan ul li img {
     width: 100%;
     display: block;
+
+    opacity: 0.9;
+    transition: transform .7s;
 }
 
 .content .slogan ul li p {
-    color: #000;
-
-    position: absolute;
-    bottom: 1%;
-    left: 1%;
+    color: rgba(255,255,255,0.3);
+    font-weight: 300;    
 }
 
 
@@ -236,6 +238,8 @@ section {
     width: 90%;
     max-width: 1280px;
     margin: 0 auto;
+
+    text-align: center;
 
     margin-bottom: 100px;
 }
@@ -343,6 +347,7 @@ section {
 
 /* 영상 자료 */
 .video {
+    text-align: center;
     margin-bottom: 100px;
 }
 
@@ -360,14 +365,18 @@ section {
 
 /* 사이트 이동 버튼 */
 .site-btn {
-    /* outline: 2px solid red; */
+    /* outline: 2px solid red; */  
     display: inline-block;
 
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);    
+      
     margin-bottom: 100px;
 }
 
 .site-btn ul {}
 
 .site-btn ul li~li {
-    margin-left: 30px;
+    margin-left: 30px;    
 }

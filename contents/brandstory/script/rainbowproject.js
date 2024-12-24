@@ -36,13 +36,11 @@ $(function(){
         $('#content').show(0);
 
         //3) 컨텐츠가 보여짐 >> #modal의 display 상태 변경
-        $('#modal').show(0);
-        $(modalId).show(0);
+        $('#modal').show(0).find(modalId).show(0);
     });
 
     // modal창 닫기
     $('#modal').click(function(){
-        $(this).hide();
-        $('#content').hide();
+        $(this).hide().find('#content li').hide();
     });
 });

@@ -4,18 +4,22 @@
 main {
     width: 100%;
     /* max-width: 1920px; */
-    margin: 0 auto 200px;
+    margin: 0 auto;
 
     height: 100%;
 
     background: url(../img/main000.jpg) no-repeat top/cover;
 }
+
 main .inner {
     /* outline: 2px solid orange; */
-    height: 100%;    
-    position: relative; /* h2 , sub-m의 기준 */
+    height: 100%;
+    position: relative;
+    /* h2 , sub-m의 기준 */
 }
+
 main .m-txt {}
+
 main h2 {
     font-family: "Diphylleia", serif;
     font-size: 64px;
@@ -27,6 +31,7 @@ main h2 {
 
     margin-bottom: 20px;
 }
+
 main .sub-m {
     /* outline: 2px solid red; */
 
@@ -36,9 +41,11 @@ main .sub-m {
     bottom: 10%;
     left: 0;
 }
+
 main .sub-m ul {}
+
 main .sub-m ul .lnb {
-    float: none;    
+    float: none;
     margin-bottom: 10px;
 }
 
@@ -51,8 +58,9 @@ main .sub-m ul .lnb::after {
     height: 1px;
     background-color: #FEF3E2;
 
-    margin: 10px 0;    
+    margin: 10px 0;
 }
+
 main .sub-m ul .lnb:nth-child(3):after {
     display: none;
 }
@@ -66,6 +74,7 @@ main .sub-m ul .lnb p {
 main .sub-m ul li.on h3 a {
     color: #FAB12F;
 }
+
 main .sub-m ul li.on p {
     display: block;
 }
@@ -77,9 +86,11 @@ main .sub-m ul .lnb h3 {
 
     margin-bottom: 10px;
 }
+
 main .sub-m ul .lnb h3 a {
     color: #fff;
 }
+
 main .sub-m ul .lnb p {
     font-size: 16px;
     font-size: 1rem;
@@ -90,11 +101,13 @@ main .sub-m ul .lnb p {
 /* section */
 section {
     /* outline: 2px solid red; */
-    width: 100%; 
+    width: 100%;
 }
+
 section .sec-txt {
     text-align: center;
 }
+
 section h4 {
     font-family: "Diphylleia", serif;
     font-size: 48px;
@@ -103,6 +116,7 @@ section h4 {
 
     margin-bottom: 30px;
 }
+
 section .sec-subtit {
     font-family: "Noto Serif KR", serif;
     font-size: 20px;
@@ -111,27 +125,78 @@ section .sec-subtit {
 
     margin-bottom: 100px;
 }
+
 section .sec-des {
     font-weight: 300;
 
     margin-bottom: 200px;
 }
 
+.con-list {
+    width: 100%;
+    background-color: #5D4F44;
+
+    margin-bottom: 100px;
+}
+
+.con-list ul {
+    width: 90%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.con-list ul li {
+    /* outline: 2px solid red; */
+    width: 33.33%;
+    text-align: center;
+    background-color: #68594C;
+
+    position: relative;
+    /* li::after의 기준 */
+}
+
+.con-list ul li.on {
+    background-color: #847061;
+}
+
+.con-list ul li.on a {
+    color: #FAB12F;
+    font-weight: 400;
+}
+
+.con-list ul li a {
+    display: block;
+    color: rgba(255,255,255,0.7);
+    line-height: 65px;
+    font-weight: 400;
+}
+
+/* .con-list li 호버 디자인 */
+.con-list ul li:hover a {
+    color: #FAB12F;
+}
+
+.con-list ul li:hover {
+    background-color: #847061;
+}
+
 /* section > content */
 ul.content {
     /* outline: 2px solid red; */
-    width: 100%;    
+    width: 100%;
 }
+
 .content li {
     /* outline: 2px solid orange; */
 
-    width: 100%;    
+    width: 100%;
 
     margin-bottom: 100px;
 
     /* h5의 기준 */
     position: relative;
 }
+
 .content li::after {
     content: "";
     display: block;
@@ -145,9 +210,10 @@ ul.content {
     font-size: 1.5rem;
     color: #000;
 
-    /* 테이프 */   
+    /* 테이프 */
     background: url(../img/tape_.png) no-repeat top left;
 }
+
 .content li .con-txt>p {
     font-size: 16px;
     font-size: 1rem;
@@ -163,30 +229,34 @@ ul.content {
 
     float: left;
 }
+
 .content li .con-img img {
     width: 100%;
     display: block;
 }
-/* 우 - 텍스트 */
-.content li:nth-child(2n-1) .con-txt {    
-    width: 49%;  
 
-    float: left;    
+/* 우 - 텍스트 */
+.content li:nth-child(2n-1) .con-txt {
+    width: 49%;
+
+    float: left;
 }
+
 .content li:nth-child(2n-1) .con-txt h5 {
     /* outline: 2px solid red; */
-    padding: 35px 0 35px 50px;    
+    padding: 35px 0 35px 50px;
 
     /* 테이프 위치 */
     position: absolute;
     left: 47%;
     top: -15px;
-    z-index: -1;      
+    z-index: -1;
 
     width: 300px;
 }
+
 .content li:nth-child(2n-1) .con-txt p {
-    /* outline: 2px solid green; */   
+    /* outline: 2px solid green; */
 
     position: absolute;
     bottom: 0;
@@ -201,46 +271,55 @@ ul.content {
 
     float: right;
 }
+
 /* 좌 - 텍스트 */
 .content li:nth-child(2n) .con-txt {
-    width: 49%;  
+    width: 49%;
 
-    float: right;    
+    float: right;
 }
+
 .content li:nth-child(2n) .con-txt h5 {
     /* outline: 2px solid red; */
-    padding: 35px 0 35px 45px;    
+    padding: 35px 0 35px 45px;
 
     /* 테이프 위치 */
     position: absolute;
     left: 30%;
     top: -15px;
-    
+
     width: 350px;
 }
+
 .content li:nth-child(2n) .con-txt p {
     /* outline: 2px solid green; */
 
     text-align: right;
-    
+
     position: absolute;
     bottom: 0;
     right: 52%;
 }
 
 /* 특정 컨텐츠 제목 위치 조절 */
-.content li:nth-child(2) .con-txt h5, .content li:nth-child(10) .con-txt h5, .content li:nth-child(12) .con-txt h5 {
+.content li:nth-child(2) .con-txt h5,
+.content li:nth-child(10) .con-txt h5,
+.content li:nth-child(12) .con-txt h5 {
     padding: 20px 0 20px 45px;
 }
-.content li:nth-child(5) .con-txt h5, .content li:nth-child(7) .con-txt h5, .content li:nth-child(9) .con-txt h5 {
+
+.content li:nth-child(5) .con-txt h5,
+.content li:nth-child(7) .con-txt h5,
+.content li:nth-child(9) .con-txt h5 {
     padding: 35px 0 35px 35px;
 }
+
 .content li:nth-child(11) .con-txt h5 {
     padding: 20px 0 20px 45px;
 }
 
 /* 처음으로 */
-.btn-container {    
+.btn-container {
     position: relative;
 
     left: 50%;

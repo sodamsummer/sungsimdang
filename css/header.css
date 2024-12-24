@@ -88,6 +88,10 @@ header::after {
 }
 
 /* .gnb 호버 디자인 */
+header:hover {
+    background-color: rgba(0,0,0,0.3);
+}
+
 .menu nav.gnb>ul>li:hover ul.lnb {
     display: block;
 }

@@ -4,7 +4,7 @@
 main {
     width: 100%;
     /* max-width: 1920px; */
-    margin: 0 auto 200px;
+    margin: 0 auto;
 
     height: 100%;
 
@@ -101,7 +101,56 @@ main .sub-m ul .lnb p {
 /* section */
 section {
     /* outline: 2px solid red; */
+    width: 100%;
     text-align: center;
+}
+
+.con-list {
+    width: 100%;
+    background-color: #5D4F44;
+
+    margin-bottom: 100px;
+}
+
+.con-list ul {
+    width: 90%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.con-list ul li {
+    /* outline: 2px solid red; */
+    width: 33.33%;
+    text-align: center;
+    background-color: #68594C;
+
+    position: relative;
+    /* li::after의 기준 */
+}
+
+.con-list ul li.on {
+    background-color: #847061;
+}
+
+.con-list ul li.on a {
+    color: #FAB12F;
+    font-weight: 400;
+}
+
+.con-list ul li a {
+    display: block;
+    color: rgba(255,255,255,0.7);
+    line-height: 65px;
+    font-weight: 400;
+}
+
+/* .con-list li 호버 디자인 */
+.con-list ul li:hover a {
+    color: #FAB12F;
+}
+
+.con-list ul li:hover {
+    background-color: #847061;
 }
 
 .content {

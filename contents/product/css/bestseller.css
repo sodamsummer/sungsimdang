@@ -93,14 +93,14 @@ section {
     width: 100%;    
 }
 
-.list {
+.con-list {
     width: 100%;
     background-color: #5D4F44;
 
     margin-bottom: 100px;
 }
 
-.list ul {
+.con-list ul {
     width: 90%;
     max-width: 1280px;
     margin: 0 auto;
@@ -118,7 +118,7 @@ section {
     margin-bottom: 50px;
 } */
 
-.list ul li {
+.con-list ul li {
     /* outline: 2px solid red; */
     width: 25%;
     text-align: center;
@@ -128,16 +128,16 @@ section {
     /* li::after의 기준 */
 }
 
-.list ul li.on {
+.con-list ul li.on {
     background-color: #847061;
 }
 
-.list ul li.on a {
+.con-list ul li.on a {
     color: #FAB12F;
     font-weight: 400;
 }
 
-.list ul li a {
+.con-list ul li a {
     display: block;
     color: #fff;
     line-height: 65px;
@@ -145,11 +145,11 @@ section {
 }
 
 /* .list li 호버 디자인 */
-.list ul li:hover a {
+.con-list ul li:hover a {
     color: #FAB12F;
 }
 
-.list ul li:hover {
+.con-list ul li:hover {
     background-color: #847061;
 }
 

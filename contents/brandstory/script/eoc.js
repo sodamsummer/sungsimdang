@@ -37,7 +37,7 @@ $(function () {
             setTimeout(function () {
                 $('.content>.txtbox>p').first().css('opacity', '1'); // 텍스트(p) 첫번째 줄
             }, 500); // h4 등장 후 0.5초 뒤
-    
+
             setTimeout(function () {
                 $('.content>.txtbox>p').last().css('opacity', '1'); // 텍스트(p) 두번째 줄
             }, 1000); // h4 등장 후 1초 뒤
@@ -59,8 +59,31 @@ $(function () {
                 $('#s4').css('opacity', '1');
             }, 900);
         }
-        
+
+        // 스크롤 값이 1400px 이상일 때
+        if (scroll > 1400) {
+            $('.sub-content>h5').css('opacity', '1');
+        }
+
     }); // scroll() 이벤트 끝
 
+    // .sub-content ul.list > li 순서대로 등장
+    var autoCall = setInterval(listUp,3500);
+
+    // 마우스 올리면 이동 정지, 벗어나면 재가동
+        $('.sub-content ul.list').mouseenter(function () {
+            clearInterval(autoCall);
+        }).mouseleave(function () {
+            autoCall = setInterval(listUp,3500);
+        });
 
 });
+
+// 함수 - 리스트 이동
+function listUp() {
+    $('.sub-content ul.list').animate({
+        marginTop: -60
+    }, 1500, function () {
+        $('.sub-content ul.list').append($('.sub-content ul.list li:first')).css('margin-top', 0);
+    });
+}

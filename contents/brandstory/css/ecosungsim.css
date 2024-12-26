@@ -18,18 +18,71 @@ main .inner {
     /* h2 , sub-m의 기준 */
 }
 
-main .m-txt {}
+main .m-txt {
+    /* outline: 2px solid red; */
+
+    position: absolute;
+    top: 20%;
+    left: 0;    
+}
+
+main .post { 
+    opacity: 0.9;
+
+    font-family: "DM Mono", monospace;
+    font-size: 14px;
+    font-size: 0.875rem;
+    color: #D0B39D;
+
+    margin-bottom: 40px;    
+}
+
+main .post span.subpage {
+    color: #FAB12F;
+}
+
+main .post span a {
+    color: #D0B39D;
+    display: inline-block;
+}
+
+main .post span a:hover {
+    text-decoration: underline;
+}
 
 main h2 {
     font-family: "Diphylleia", serif;
     font-size: 64px;
     font-size: 4rem;
 
-    position: absolute;
-    top: 20%;
-    left: 0;
+    /* animation */
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: slideDown 1.5s forwards;
+}
 
-    margin-bottom: 20px;
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 main .sub-m {

@@ -121,7 +121,7 @@ p.caption>a {
     color: #FAB12F;
     font-size: 14px;
     font-size: 0.875rem;
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
 }
 
 p.caption:hover a {

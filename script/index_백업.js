@@ -27,49 +27,12 @@ $(document).ready(function () {
 
 
     // main
-    // Swiper 초기화
-    let progressBarWidth = 0; // 진행 바의 현재 상태 저장
-    const $progressBar = $('.progress-bar'); // 진행 바 DOM
+    // 1. fadeSlide
+    var autoCall; // 인터벌용 변수
+    autoCall = setInterval(fadeSlide, 5000); // 3초마다 자동실행
 
-    // Swiper 초기화
-    const swiper = new Swiper('.swiper-container', {
-        slidesPerView: 1,   // 한 번에 한 슬라이드만 표시
-        loop: true,         // 슬라이드 반복
-        effect: 'fade',     // 페이드 전환 효과
-        autoplay: {
-            delay: 10000,      // 10초마다 슬라이드 전환
-            disableOnInteraction: false, // 사용자 동작 후에도 자동 재생 유지
-        },
-        on: {
-            slideChangeTransitionStart: function () {
-                resetProgressBar(); // 슬라이드 변경 시 진행 바 리셋
-            },
-        },
-    });
-
-    // 진행 바 동작 함수
-    function resetProgressBar() {
-        $progressBar.stop(true).css('width', '0'); // 진행 바 초기화
-        $progressBar.animate({ width: '100%' }, 10000, 'linear'); // 10초 동안 채우기
-        progressBarWidth = 0; // 진행 바 상태 리셋
-    }
-
-    // 버튼에 마우스 올리면 자동 전환 정지 및 진행 바 일시 정지
-    $('.swiper-slide .btn-container').on('mouseenter', function () {
-        swiper.autoplay.stop(); // 자동 전환 정지
-        $progressBar.stop(true); // 진행 바 애니메이션 정지
-        progressBarWidth = (parseFloat($progressBar.css('width')) / $progressBar.parent().width()) * 100; // 진행 바 현재 width 저장
-    });
-
-    // 버튼에서 마우스 벗어나면 자동 전환 시작 및 진행 바 재시작
-    $('.swiper-slide .btn-container').on('mouseleave', function () {
-        swiper.autoplay.start(); // 자동 전환 다시 시작
-        $progressBar.stop(true).css('width', `${progressBarWidth}%`); // 멈춘 지점에서부터 진행 바 시작
-        $progressBar.animate({ width: '100%' }, 3000, 'linear'); // 진행 바 다시 애니메이션 시작
-    });
-
-    // 초기 진행 바 시작
-    resetProgressBar();
+    // fadeSlide 멈추기
+    //var stopAutoCall = clearInterval(autoCall);
 
 
     // article2. 우리의 방식

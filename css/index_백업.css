@@ -1,37 +1,47 @@
 @charset "utf-8";
 
 /* main */
-/* 슬라이드가 보여지는 공간 */
-.swiper-container {
+main {
     /* 보이는 화면만큼 */
     width: 100%;
     height: 100%;
-    position: relative;
-    /* .swiper-slide의 기준 */
 
     margin-bottom: 200px;
     /* 컨텐츠 간 간격 */
 }
 
-/* 전체를 담은 부모 */
-div.swiper-wrapper {
+/* 슬라이드가 보여지는 공간 + 전체를 담은 부모 */
+div.mainviewer {
     width: 100%;
     height: 100%;
+
+    position: relative;
+    /* .slide의 기준 */
 }
 
 /* 각 슬라이드 */
-.swiper-slide {
+.mainviewer .slide {
     width: 100%;
     height: 100%;
+
+    position: absolute;
+    /* .slide 겹쳐놓기 */
+    top: 0;
+    left: 0;
 }
 
-.swiper-slide img {
+.mainviewer .slide img {
     width: 100%;
     height: 100%;
     display: block;
 }
 
-.swiper-wrapper .swiper-slide .ci {
+/* .active */
+.mainviewer .slide.active {
+    z-index: 10;
+}
+
+.mainviewer .slide .ci {
     height: 200px;
 
     position: absolute;
@@ -40,44 +50,34 @@ div.swiper-wrapper {
     transform: translate(-50%, -50%);
 }
 
-.swiper-wrapper .swiper-slide .ci img {
+.mainviewer .slide .ci img {
     width: 100%;
     display: block;
 }
 
 /* 슬라이드 텍스트 디자인 */
-.swiper-wrapper .swiper-slide .sli-txt {
-    /* outline: 2px solid red; */
-}
-
-.swiper-wrapper .swiper-slide .sli-txt h2 {
+.mainviewer .slide .sli-txt h2 {
     font-family: "Diphylleia", serif;
-    text-shadow: 0 0 10px black; 
 }
 
 /* 슬라이드1 */
-.swiper-wrapper .s1 .sli-txt {
-    text-align: center;
+.mainviewer .s1 .sli-txt h2 {
+    font-size: 20px;
+    font-size: 1.25rem;
 
     position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.swiper-wrapper .s1 .sli-txt h2 {
-    font-size: 27.2px;
-    font-size: 1.7rem;       
+    top: 61%;
+    left: 25%;
 }
 
 /* 슬라이드2 */
-.swiper-wrapper .s2 .sli-txt {
+.mainviewer .s2 .sli-txt {
     position: absolute;
     top: 61%;
     left: 17%;
 }
 
-.swiper-wrapper .s2 .sli-txt h2 {
+.mainviewer .s2 .sli-txt h2 {
     font-size: 27.2px;
     font-size: 1.7rem;
 
@@ -85,87 +85,23 @@ div.swiper-wrapper {
 }
 
 /* 슬라이드3 */
-.swiper-wrapper .s3 .sli-txt {
+.mainviewer .s3 .sli-txt {
     position: absolute;
     top: 55%;
     left: 17%;
 }
 
-.swiper-wrapper .s3 .sli-txt h2 {
+.mainviewer .s3 .sli-txt h2 {
     font-size: 40px;
     font-size: 2.5rem;
 
     margin-bottom: 30px;
 }
 
-.swiper-wrapper .s3 .sli-txt p {
+.mainviewer .s3 .sli-txt p {
     font-family: "Noto Serif KR", serif;
     font-weight: 300;
 }
-
-/* 효과 */
-.sli-txt h2, .sli-txt p {
-    opacity: 0;
-    transform: translateX(-50px);
-    /* 초기 위치는 왼쪽으로 50px 이동 */
-    transition: all 1.5s;
-    /* 슬라이드에 따른 애니메이션 */
-}
-
-/* 활성화된 슬라이드의 텍스트에 애니메이션 적용 */
-.swiper-slide-active .sli-txt h2 {
-    opacity: 1;
-    transform: translateX(0);
-    /* 애니메이션 시작시 텍스트가 제자리로 이동 */
-}
-
-/* Slideshow의 텍스트 애니메이션 */
-@keyframes slideIn {
-    0% {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.swiper-slide-active .sli-txt h2 {
-    animation: slideIn 1.5s ease-out forwards;
-    /* 슬라이드가 활성화될 때 애니메이션 적용 */
-}
-
-.swiper-slide-active .sli-txt>p {
-    animation: slideIn 1.5s ease-out forwards;
-    animation-delay: 0.3s;
-}
-
-
-/* 진행 바 컨테이너 */
-.progress-bar-container {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 5px;
-    /* 진행 바 높이 */
-    background: #e0e0e0;
-    /* 회색 배경 */
-    /* border-radius: 2.5px; */
-    overflow: hidden;
-
-    z-index: 9999;
-}
-
-/* 진행 바 */
-.progress-bar {
-    height: 100%;
-    width: 0;
-    background: #FAB12F;
-}
-
 
 /* section */
 section {
@@ -248,7 +184,7 @@ p.caption:hover a {
 
     position: absolute;
     top: -50px;
-    left: 300px;
+    left: 300px;        
 }
 
 .eco .soboro img {
@@ -368,7 +304,7 @@ p.caption:hover a {
     background-position: top;
 }
 
-.our-con .our-list li a h4:hover {
+.our-con .our-list li a h4:hover {    
     background-position: bottom;
 }
 
@@ -397,8 +333,8 @@ p.caption:hover a {
 
     /* 배경이미지 높이 기준 */
     height: 715px;
-
-    background: url(../img/ourway__color.jpg);
+    
+    background: url(/sungsimdang/img/ourway__color.jpg); /* 절대경로 */
 
     float: right;
 }
@@ -600,7 +536,7 @@ p.caption:hover a {
 .fam-con .fam-arrow {
     /* outline: 2px solid red; */
     height: 50px;
-    margin-bottom: 60px;
+    margin-bottom: 60px;    
 
     float: left;
 }
@@ -610,28 +546,28 @@ p.caption:hover a {
 
     width: 50px;
     height: 50px;
-    float: left;
+    float: left;    
 
     font-size: 0;
 }
 
 .fam-con .fam-arrow a.prev {
-    background: url(../img/btn_prev_.png) no-repeat left/cover;
+    background: url(/sungsimdang/img/btn_prev_.png) no-repeat left/cover; /* 절대경로 */
 }
 
-/* hover했을 때 */
-.fam-con .fam-arrow a.prev:hover {
-    background: url(../img/btn_prev_.png) no-repeat right/cover;
+/* hover했을 때, .clicked */
+.fam-con .fam-arrow a.prev:hover, .fam-con .fam-arrow a.prev.clicked {
+    background: url(/sungsimdang/img/btn_prev_.png) no-repeat right/cover; /* 절대경로 */
 }
 
 .fam-con .fam-arrow a.next {
-    background: url(../img/btn_next_.png) no-repeat left/cover;
+    background: url(/sungsimdang/img/btn_next_.png) no-repeat left/cover; /* 절대경로 */
     margin-left: 15px;
 }
 
-/* hover했을 때 */
-.fam-con .fam-arrow a.next:hover {
-    background: url(../img/btn_next_.png) no-repeat right/cover;
+/* hover했을 때, .clicked */
+.fam-con .fam-arrow a.next:hover, .fam-con .fam-arrow a.next.clicked {
+    background: url(/sungsimdang/img/btn_next_.png) no-repeat right/cover; /* 절대경로 */
 }
 
 
@@ -639,7 +575,7 @@ p.caption:hover a {
 .fam-con .fam-arrow .pager {
     /* outline: 2px solid red; */
     display: inline-block;
-
+    
     line-height: 50px;
     letter-spacing: 5px;
 

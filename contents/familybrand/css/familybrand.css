@@ -17,7 +17,8 @@ main .inner {
     /* m-txt의 기준 */
 }
 
-main .m-txt {text-align: center;
+main .m-txt {
+    text-align: center;
     /* outline: 2px solid red; */
     width: 100%;
 
@@ -44,6 +45,7 @@ main .post {
 main .post span.subpage {
     color: #FAB12F;
 }
+
 main .post span a {
     color: #D0B39D;
     display: inline-block;
@@ -64,7 +66,7 @@ main h2 {
     opacity: 0;
     transform: translateY(-50px);
     animation: slideDown 1.5s forwards;
-    animation-delay: 0.3s; 
+    animation-delay: 0.3s;
 }
 
 main h2::after {
@@ -82,13 +84,13 @@ main h2::after {
 main p {
     font-size: 16px;
     font-size: 1rem;
-    font-weight: 300;    
+    font-weight: 300;
 
     /* animation */
     opacity: 0;
     transform: translateY(50px);
     animation: slideUp 1.5s forwards;
-    animation-delay: 0.6s; 
+    animation-delay: 0.6s;
 }
 
 @keyframes slideDown {
@@ -118,7 +120,7 @@ main p {
 
 /* section */
 section {
-    width: 100%;    
+    width: 100%;
 }
 
 .con-list {
@@ -164,4 +166,122 @@ section {
 
 .con-list ul li:hover {
     background-color: #847061;
+}
+
+/* 패밀리브랜드 목록 */
+.b-list {
+    width: 90%;
+    max-width: 1280px;
+    margin: 0 auto;
+
+    margin-bottom: 50px;
+}
+
+.b-list ul {}
+
+.b-list ul li {
+    /* outline: 2px solid red; */
+    width: 47%;
+
+    position: relative;
+    /* .b-btn의 기준 */
+
+    margin-bottom: 50px;
+}
+
+.b-list ul li~li {
+    margin-left: 6%;
+}
+
+.b-list ul li:nth-child(2n-1) {
+    margin-left: 0;
+}
+
+.b-list ul li .b-imgbox {
+    width: 100%;
+    transition: all 0.5s;
+
+    outline: 2px solid #000;
+    margin-bottom: 30px;
+}
+
+.b-list ul li:hover .b-imgbox {
+    outline: 2px solid #FAB12F;
+}
+
+.b-list ul li .b-imgbox img {
+    width: 100%;
+    display: block;
+}
+
+.b-list ul li .b-btn {
+    position: absolute;
+    top: 55%;
+    right: 5%;
+}
+
+.b-list ul li .b-btn a {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #FAB12F;
+}
+
+/* 수평선 */
+.horizontal,
+.vertical {
+    position: absolute;
+    background: #000;
+    transition: transform 0.3s;
+}
+
+.horizontal {
+    width: 30px;
+    height: 3px;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+/* 수직선 */
+.vertical {
+    width: 3px;
+    height: 30px;
+
+    top: 31%;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+}
+
+.b-btn:hover .vertical {
+    transform: translateX(-50%);
+}
+
+.b-list ul li .b-txt {
+    color: rgba(255, 255, 255, 0.9)
+}
+
+.b-list ul li .b-txt .b-name {
+    font-size: 32px;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: -3px;
+
+    margin-bottom: 30px;
+}
+
+.b-list ul li .b-txt p {
+    line-height: 2;
+}
+
+.b-list ul li .b-txt .b-des-tit {
+    float: left;
+    margin-right: 50px;
+}
+
+.b-list ul li .b-txt .b-des {
+    float: left;
+
+    font-weight: 300;
 }

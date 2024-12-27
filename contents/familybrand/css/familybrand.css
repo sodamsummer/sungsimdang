@@ -228,29 +228,20 @@ section {
 }
 
 /* 효과 */
-.b-list li {
+.b-list li, .b-btn {
     opacity: 0;
     transform: translateY(50px);
     transition: all 1.5s ease;
 }
 
-.b-list li.show {
+.b-list li.show, .b-btn.show {
     opacity: 1;
     transform: translateY(0);
 }
 
 .b-list li .b-btn {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 1.5s ease 0.5s;
+    transition-delay: 0.5s;
 }
-
-.b-list li .b-btn.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.b-list li .b-txt {}
 
 /* 수평선 */
 .horizontal,

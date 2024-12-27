@@ -23,49 +23,23 @@ $(function () {
         // 스크롤 위치 추적
         lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 
+        // 2. 스크롤을 내리면 컨텐츠가 순차적으로 fadeIn()
+        var show = '.txtbox>h4 , .txtbox>p , .slogan , .sub-content>h5 , .sub-content>p , .links , .video , .site-btn'; 
 
-        // ----------------------------------------
-        // section
-        // 1. 스크롤바가 수직으로 이동한 위치값 반환
-        var scroll = $(window).scrollTop();
-        console.log(scroll); // 300 - 등장
+        // 각 콘텐츠가 화면에 나타날 때 애니메이션 추가
+        $(show).each(function () {
+            var elementTop = $(this).offset().top;
+            var windowBottom = $(window).scrollTop() + $(window).height();
 
-        // 스크롤 값이 300px 이상일 때
-        if (scroll > 300) {
-            $('.content>.txtbox>h4').css('opacity', '1');
-
-            setTimeout(function () {
-                $('.content>.txtbox>p').first().css('opacity', '1'); // 텍스트(p) 첫번째 줄
-            }, 500); // h4 등장 후 0.5초 뒤
-
-            setTimeout(function () {
-                $('.content>.txtbox>p').last().css('opacity', '1'); // 텍스트(p) 두번째 줄
-            }, 1000); // h4 등장 후 1초 뒤
-        }
-
-        // 스크롤 값이 600px 이상일 때
-        if (scroll > 600) {
-            $('#s1').css('opacity', '1');
-
-            setTimeout(function () {
-                $('#s2').css('opacity', '1');
-            }, 300);
-
-            setTimeout(function () {
-                $('#s3').css('opacity', '1');
-            }, 600);
-
-            setTimeout(function () {
-                $('#s4').css('opacity', '1');
-            }, 900);
-        }
-
-        // 스크롤 값이 1400px 이상일 때
-        if (scroll > 1400) {
-            $('.sub-content>h5').css('opacity', '1');
-        }
+            if (windowBottom > elementTop) {
+                $(this).addClass('show'); // 화면에 나타나면 show 클래스 추가
+            }
+        });
 
     }); // scroll() 이벤트 끝
+
+    // 페이지 로드 시 처음 화면에 보이는 콘텐츠에 애니메이션 적용
+    $(window).trigger('scroll');
 
     // .sub-content ul.list > li 순서대로 등장
     var autoCall = setInterval(listUp,3500);

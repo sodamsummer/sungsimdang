@@ -227,6 +227,22 @@ section {
     background-color: #FAB12F;
 }
 
+/* 효과 */
+.b-list li, .b-btn {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1.5s ease;
+}
+
+.b-list li.show, .b-btn.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.b-list li .b-btn {
+    transition-delay: 0.5s;
+}
+
 /* 수평선 */
 .horizontal,
 .vertical {

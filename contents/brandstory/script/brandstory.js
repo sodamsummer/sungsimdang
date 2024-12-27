@@ -23,52 +23,21 @@ $(document).ready(function () {
         // 스크롤 위치 추적
         lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 
+
+        // 2. 스크롤을 내리면 컨텐츠가 순차적으로 fadeIn()
+        // 각 콘텐츠가 화면에 나타날 때 애니메이션 추가
+        $('.con-img, .con-txt h3, .con-txt p').each(function () {
+            var elementTop = $(this).offset().top;
+            var windowBottom = $(window).scrollTop() + $(window).height();
+
+            if (windowBottom > elementTop) {
+                $(this).addClass('show'); // 화면에 나타나면 show 클래스 추가
+            }
+        });
+
     }); // scroll() 이벤트 끝
 
-    // 스크롤을 내리면 컨텐츠가 순차적으로 fadeIn()
-
-    $(window).on('scroll', function () {
-
-        // 1. 스크롤바가 수직으로 이동한 위치값 반환
-        var scroll = $(window).scrollTop();
-        console.log(scroll); // 300 - h3,img / 600 - p 등장
-
-        // scroll === 300
-
-        // 스크롤 값이 300px 이상일 때
-
-        if (scroll > 300) {
-            $('.content>.con-img').css('opacity', '1'); // 사진 나타남
-
-            // 사진이 나타난 후, h3이 나타나게 설정
-            setTimeout(function () {
-                $('.content>.con-txt>h3').css('opacity', '1'); // 텍스트(h3) 나타남
-            }, 500); // 사진 등장 후 0.5초 뒤
-
-            setTimeout(function () {
-                $('.content>.con-txt>p').css('opacity', '1'); // 텍스트(p) 나타남
-            }, 1000); // 사진 등장 후 1초 뒤
-        }
-
-        // 스크롤 값이 600px 이상일 때
-        /* if (scroll > 600) {
-            $('.content>.con-txt>p').css('opacity', '1');
-        }    */     
-
-        // 스크롤 값이 1000px 이상일 때
-        if (scroll > 1000) {
-            $('.sub-content>.con-img').css('opacity', '1');
-
-            setTimeout(function () {
-                $('.sub-content>.con-txt>p').css('opacity', '1'); // 텍스트 나타남
-            }, 500); // 사진 등장 후 0.5초 뒤
-        }
-
-        /* // 스크롤 값이 1300px 이상일 때
-        if (scroll > 1300) {
-            $('.sub-content>.con-txt>p').css('opacity', '1'); // 사진 나타남
-        } */
-
-    });
+    // 페이지 로드 시 처음 화면에 보이는 콘텐츠에 애니메이션 적용
+    $(window).trigger('scroll');
 
 });

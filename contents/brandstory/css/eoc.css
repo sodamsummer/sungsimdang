@@ -219,10 +219,6 @@ section {
     font-size: 3rem;
     color: #FEF3E2;
 
-    /* 초기 설정 */
-    opacity: 0;
-    transition: opacity 1s;
-
     margin-bottom: 100px;
 }
 
@@ -235,23 +231,12 @@ section {
     margin-bottom: 100px;
 }
 
-.content .txtbox p {
-    /* 초기 설정 */
-    opacity: 0;
-    transition: opacity 1s;
-}
-
-
 .content .slogan {
     /* outline: 2px solid red; */    
 }
 
 .content .slogan ul li {
     width: 23.5%;
-
-    /* 초기 설정 */
-    opacity: 0;
-    transition: opacity 1s;
 }
 
 .content .slogan ul li .imgbox {
@@ -422,8 +407,18 @@ section {
     margin-bottom: 100px;
 }
 
-.site-btn ul {}
-
 .site-btn ul li~li {
     margin-left: 30px;    
+}
+
+/* 효과 */
+.txtbox>h4, .txtbox>p, .slogan, .sub-content>h5, .sub-content>p, .links, .video, .site-btn  {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1.5s ease;
+}
+
+.txtbox>h4.show, .txtbox>p.show, .slogan.show, .sub-content>h5.show, .sub-content>p.show, .links.show, .video.show, .site-btn.show {
+    opacity: 1;
+    transform: translateY(0);
 }

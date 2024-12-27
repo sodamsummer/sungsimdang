@@ -23,6 +23,22 @@ $(function () {
         // 스크롤 위치 추적
         lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 
+        // 2. 스크롤을 내리면 컨텐츠가 순차적으로 fadeIn()
+        var show = '.sec-txt, .sec-subtit, .sec-des, .content li .con-img, .content li .con-txt h5, .con-txt p'; 
+
+        // 각 콘텐츠가 화면에 나타날 때 애니메이션 추가
+        $(show).each(function () {
+            var elementTop = $(this).offset().top;
+            var windowBottom = $(window).scrollTop() + $(window).height();
+
+            if (windowBottom > elementTop) {
+                $(this).addClass('show'); // 화면에 나타나면 show 클래스 추가
+            }
+        });
+
     }); // scroll() 이벤트 끝
+
+    // 페이지 로드 시 처음 화면에 보이는 콘텐츠에 애니메이션 적용
+    $(window).trigger('scroll');
 
 });

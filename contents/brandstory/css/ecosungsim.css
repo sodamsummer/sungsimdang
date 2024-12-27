@@ -14,6 +14,7 @@ main {
 main .inner {
     /* outline: 2px solid orange; */
     height: 100%;
+
     position: relative;
     /* h2 , sub-m의 기준 */
 }
@@ -371,12 +372,38 @@ ul.content {
     padding: 20px 0 20px 45px;
 }
 
-/* 처음으로 */
-.btn-container {
-    position: relative;
+/* 효과1 - 아래에서 위로 */
+.sec-txt, .sec-subtit, .sec-des {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1.5s;
+}
 
-    left: 50%;
-    transform: translateX(-50%);
+.sec-txt.show, .sec-subtit.show, .sec-des.show {
+    opacity: 1;
+    transform: translateY(0);
+}
 
-    margin-bottom: 100px;
+/* 효과2 - 왼쪽에서 등장 */
+.content li:nth-child(2n-1) .con-img, .content li:nth-child(2n) .con-txt h5, .content li:nth-child(2n) .con-txt p {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 1.5s;
+}
+
+.content li:nth-child(2n-1) .con-img.show, .content li:nth-child(2n) .con-txt h5.show, .content li:nth-child(2n) .con-txt p.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* 효과3 - 오른쪽에서 등장 */
+.content li:nth-child(2n) .con-img, .content li:nth-child(2n-1) .con-txt h5, .content li:nth-child(2n-1) .con-txt p  {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 1.5s;
+}
+
+.content li:nth-child(2n) .con-img.show, .content li:nth-child(2n-1) .con-txt h5.show, .content li:nth-child(2n-1) .con-txt p.show {
+    opacity: 1;
+    transform: translateX(0);
 }

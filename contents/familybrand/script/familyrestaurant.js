@@ -1,4 +1,4 @@
-// familybrand.js
+// familyrestaurant.js
 
 $(document).ready(function () {
 

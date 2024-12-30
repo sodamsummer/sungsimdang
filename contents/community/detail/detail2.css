@@ -1,0 +1,364 @@
+@charset "utf-8";
+
+/* main */
+main {
+    width: 100%;
+    margin: 0 auto 100px;
+
+    height: 50%;
+
+    background: url(../img/fresh-bread-wooden-background.jpg) no-repeat top/cover;
+}
+
+main .inner {
+    /* outline: 2px solid orange; */
+    height: 100%;
+    position: relative;
+    /* m-txt의 기준 */
+}
+
+main .m-txt {
+    text-align: center;
+    /* outline: 2px solid red; */
+
+    position: absolute;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+}
+
+main .post {
+    font-family: "DM Mono", monospace;
+    font-size: 14px;
+    font-size: 0.875rem;
+    color: #D0B39D;
+
+    margin-bottom: 40px;
+
+    /* animation */
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: slideDown 1.5s forwards;
+}
+
+main .post span.subpage {
+    color: #FAB12F;
+}
+
+main .post span a {
+    color: #D0B39D;
+    display: inline-block;
+}
+
+main .post span a:hover {
+    text-decoration: underline;
+}
+
+main h2 {
+    font-family: "Diphylleia", serif;
+    font-size: 64px;
+    font-size: 4rem;
+
+    margin-bottom: 40px;
+
+    /* animation */
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: slideDown 1.5s forwards;
+    animation-delay: 0.3s;
+}
+
+main h2::after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+
+    width: 100px;
+    height: 1px;
+    background-color: #fff;
+
+    margin-top: 40px;
+}
+
+main p {
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 300;
+
+    /* animation */
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUp 1.5s forwards;
+    animation-delay: 0.6s;
+}
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* section */
+section {
+    width: 100%;
+}
+
+.con-list {
+    width: 100%;
+    background-color: #5D4F44;
+
+    margin-bottom: 100px;
+}
+
+.con-list ul {
+    width: 90%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.con-list ul li {
+    /* outline: 2px solid red; */
+    width: 50%;
+    text-align: center;
+    background-color: #68594C;
+}
+
+.con-list ul li.on {
+    background-color: #847061;
+}
+
+.con-list ul li.on a {
+    color: #FAB12F;
+    font-weight: 400;
+}
+
+.con-list ul li a {
+    display: block;
+    color: #fff;
+    line-height: 65px;
+    font-weight: 300;
+}
+
+/* .list li 호버 디자인 */
+.con-list ul li:hover a {
+    color: #FAB12F;
+}
+
+.con-list ul li:hover {
+    background-color: #847061;
+}
+
+/* section */
+.notice {
+    /* outline: 2px solid red; */
+    width: 90%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.notice::after {
+    content: "";
+    display: block;
+    background-color: rgba(255,255,255,0.7);
+    height: 1px;
+    width: 100%;
+
+    margin-bottom: 100px;
+}
+
+.notice {
+    width: 100%;
+}
+
+.notice ul {
+    width: 100%;
+
+    margin-bottom: 100px;
+}
+
+.notice ul li:nth-child(2n) {
+    margin-left: 4%
+}
+
+.n-post {
+    /* outline: 2px solid red; */
+    width: 48%;
+    height: 350px;
+}
+
+.n-post .n-pic {
+    /* outline: 2px solid yellow; */
+    width: 50%;
+    opacity: 0.5;
+    float: left;
+}
+
+.n-post .n-pic:hover {
+    opacity: 1;
+}
+
+.n-post .n-pic a img {
+    width: 100%;
+    display: block;
+}
+
+.n-post .n-des {
+    /* outline: 2px solid green; */
+    width: 47%;
+    height: 100%;
+    margin-left: 3%;
+    float: left;
+}
+
+.n-post .n-des a {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.n-post .n-des a .n-cate {
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: #FAB12F;
+
+    margin-bottom: 10px;
+}
+
+/* 제목 두줄까지 보임 */
+.n-post .n-des a .n-tit {
+    height: 92px;
+
+    font-size: 32px;
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 1);
+
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: keep-all;    
+
+    margin-bottom: 20px;
+}
+
+.n-post .n-des .n-tit:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+.n-post .n-des a .n-con {
+    /* display: none; */
+    width: 100%;
+    height: 170px;
+
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    word-break: keep-all;
+
+    margin-bottom: 20px;
+}
+
+.n-post .n-des a .n-con:hover {
+    text-decoration: underline;
+}
+
+.n-post .n-des a .n-con div {}
+
+.n-post .n-des a .n-con b {}
+
+.n-post .n-des a .n-con p {}
+
+.n-post .n-des .post-date {
+    font-size: 12px;
+    font-size: 0.75rem;
+    font-weight: 300;
+    opacity: 0.5;
+}
+
+/* 인스타그램 */
+.instagram {
+    width: 90%;
+    max-width: 1280px;
+    margin: 0 auto;
+
+    margin-bottom: 100px;
+}
+
+.instagram .txtbox {
+    text-align: center;
+}
+
+.instagram .txtbox h3 {
+    font-family: "DM Mono", monospace;
+    font-size: 1.5rem;
+
+    margin-bottom: 50px;
+}
+
+.instagram .txtbox h3 a {
+    color: #fff;
+}
+
+.instagram .txtbox p {
+    font-family: "DM Mono", monospace;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.instagram .instapost {
+    width: 100%;
+}
+
+.instagram li {
+    width: 23.5%;
+    margin-bottom: 2%;    
+    overflow: hidden;
+}
+
+.instagram li:hover img {
+    transform: scale(1.1);
+    opacity: 1;  
+}
+
+.instagram li~li {
+    margin-left: 2%
+}
+
+.instagram li:nth-child(5) {
+    margin-left: 0;
+}
+
+.instagram li a {}
+
+.instagram li a:hover {}
+
+.instagram li img {
+    width: 100%;
+    display: block;
+    opacity: 0.5;  
+    transition: all 0.5s;
+}

@@ -2,8 +2,8 @@
 
 $(document).ready(function () {
 
-    // header
-    // 1. 스크롤 내릴 때 사라지기 2. 스크롤 올릴 때 나타나기
+    // 1. header
+    // 스크롤 내릴 때 사라지기 > 스크롤 올릴 때 나타나기
     var lastScrollTop;
 
     $(window).on('scroll', function () {
@@ -23,12 +23,8 @@ $(document).ready(function () {
         // 스크롤 위치 추적
         lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 
-    }); // scroll() 이벤트 끝
 
-    // 스크롤을 내리면 컨텐츠가 순차적으로 fadeIn()
-
-    // 스크롤 이벤트 처리
-    $(window).on('scroll', function() {
+        // 2. 스크롤을 내리면 컨텐츠가 순차적으로 fadeIn()
 
         // 각 콘텐츠가 화면에 나타날 때 애니메이션 추가
         $('.b-list li, .b-btn').each(function() {
@@ -39,9 +35,10 @@ $(document).ready(function () {
             $(this).addClass('show'); // 화면에 나타나면 show 클래스 추가
           }
         });
-      });
 
-      // 페이지 로드 시 처음 화면에 보이는 콘텐츠에 애니메이션 적용
-      $(window).trigger('scroll');
+    }); // scroll() 이벤트 끝
 
+    // 페이지 로드 시 처음 화면에 보이는 콘텐츠에 애니메이션 적용
+    $(window).trigger('scroll');
+      
 });

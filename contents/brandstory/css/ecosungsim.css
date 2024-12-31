@@ -163,7 +163,7 @@ section .sec-txt {
 }
 
 section h4 {
-    font-family: "Diphylleia", serif;
+    /* font-family: "Diphylleia", serif; */
     font-size: 48px;
     font-size: 3rem;
     color: #FEF3E2;
@@ -180,8 +180,47 @@ section .sec-subtit {
     margin-bottom: 100px;
 }
 
+/* 페이퍼백 */
+section .paperbag {
+    width: 250px;
+    margin: 0 auto 50px;
+}
+
+section .paperbag img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+
+    /* 흔들리는 애니메이션 */
+    animation: shake 10s ease-in-out infinite;
+}
+
+/* 흔들림 애니메이션 정의 */
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(10deg);
+    }
+
+    50% {
+        transform: rotate(-10deg);
+    }
+
+    75% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
 section .sec-des {
     font-weight: 300;
+    color: rgba(255,255,255,0.6);
 
     margin-bottom: 200px;
 }
@@ -251,6 +290,10 @@ ul.content {
     position: relative;
 }
 
+.content li:hover .con-img img {
+    transform: scale(1.1);
+}
+
 .content li::after {
     content: "";
     display: block;
@@ -259,7 +302,7 @@ ul.content {
 
 /* 콘텐츠 텍스트 공통 디자인 */
 .content li .con-txt>h5 {
-    font-family: "Diphylleia", serif;
+    /* font-family: "Diphylleia", serif; */
     font-size: 32px;
     font-size: 1.5rem;
     color: #000;
@@ -284,9 +327,14 @@ ul.content {
     float: left;
 }
 
+.content .con-img {
+    overflow: hidden;
+}
+
 .content li .con-img img {
     width: 100%;
     display: block;
+    transition: all 0.5s;
 }
 
 /* 우 - 텍스트 */

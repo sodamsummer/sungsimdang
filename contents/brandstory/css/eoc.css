@@ -154,8 +154,9 @@ main .sub-m ul .lnb p {
 
 /* section */
 section {
-    /* outline: 2px solid red; */
-    width: 100%;    
+    width: 100%;  
+
+    position: relative; /* .site-btn의 기준 */
 }
 
 .con-list {
@@ -214,7 +215,7 @@ section {
 }
 
 .content h4 {
-    font-family: "Diphylleia", serif;
+    /* font-family: "Diphylleia", serif; */
     font-size: 48px;
     font-size: 3rem;
     color: #FEF3E2;
@@ -223,12 +224,17 @@ section {
 }
 
 .content .txtbox {
-    font-family: "Noto Serif KR", serif;
-    font-size: 20px;
-    font-size: 1.25rem;
     text-align: center;
 
     margin-bottom: 100px;
+}
+
+.content .txtbox p {
+    font-family: "Noto Serif KR", serif;
+    font-size: 20px;
+    font-size: 1.25rem;   
+    font-weight: 300;
+
 }
 
 .content .slogan {
@@ -337,15 +343,6 @@ section {
     float: none;
     text-align: center;
     line-height: 3;
-
-    /* .icon의 기준 */
-    position: relative;
-}
-
-/* on */
-.sub-content .links .list li.on {
-    /* 초기설정 */
-    display: block;
 }
 
 .sub-content .links .list li a {
@@ -360,51 +357,123 @@ section {
     font-weight: 400;
 }
 
-.sub-content .links .list li .icon {
-    background: url(../img/01_eoc/btn_links.png) no-repeat left;
-    font-size: 0;
-
-    width: 30px;
-    height: 30px;
-
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 0;
-}
-
-.sub-content .links .list li:hover .icon {
-    background-position: right;
-}
-
 /* 영상 자료 */
 .video {
-    text-align: center;
-    margin-bottom: 100px;
+    width: 90%;
+    max-width: 1280px;
+    margin: 0 auto 200px;
 }
 
-.video p {
+.video>p {
     font-family: "DM Mono", monospace;
     color: #FAB12F;
 
     text-align: left;
-
-    width: 10%;
-    max-width: 1280px;
-    margin: 0 auto;
+        
     margin-bottom: 10px;
+}
+
+.video .v-list li {
+    width: 26.666%;   
+
+    position: relative; /* li:after의 기준 */
+}
+
+.video .v-list li a {
+    color: #fff;
+}
+
+.video .v-list li~li {
+    margin-left: 10%;
+}
+
+.video .v-list li img {
+    width: 100%;
+    display: block; 
+    opacity: 0.5;  
+    outline: 2px solid black;
+    transition: all 0.5s;
+
+    margin-bottom: 10px;
+}
+
+.video .v-list li:hover img {
+    opacity: 0.8;
+    outline: 2px solid #FAB12F;    
+}
+
+.video .v-list li a::after {
+    content: "▶";
+    display: block;
+    text-align: center;
+    line-height: 50px;;
+    box-sizing: border-box;
+
+    width: 50px;
+    height: 50px;
+    background-color: #D4191F;
+    border-radius: 50px;
+
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.video .v-list li .v-tit {
+    text-align: center;
+    font-weight: 300;
+}
+
+.video .v-list li div {
+    display: none;
+}
+
+/* modal 실행 css */
+#modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    position: fixed; /* #back, #exit의 기준 */
+    left: 0;
+    top: 0;
+    z-index: 999;
+
+    display: none;
+}
+
+#back {    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: none;
+}
+
+#exit {
+    line-height: 50px;
+    text-align: center;
+    font-weight: 700;
+    cursor: pointer;
+
+    width: 50px;
+    height: 50px;
+    background-color: #D4191F;
+    border-radius: 50px;
+
+    position: absolute;
+    top: 30%;
+    left: 65%;
 }
 
 /* 사이트 이동 버튼 */
 .site-btn {
-    /* outline: 2px solid red; */  
-    display: inline-block;
-
-    position: relative;
+    position: absolute;
+    top: 104%;
     left: 50%;
-    transform: translateX(-50%);    
-      
-    margin-bottom: 100px;
+    transform: translateX(-50%);       
 }
 
 .site-btn ul li~li {
@@ -412,13 +481,13 @@ section {
 }
 
 /* 효과 */
-.txtbox>h4, .txtbox>p, .slogan, .sub-content>h5, .sub-content>p, .links, .video, .site-btn  {
+.txtbox>h4, .txtbox>p, .slogan, .sub-content>h5, .sub-content>p, .links, .video {
     opacity: 0;
     transform: translateY(50px);
     transition: all 1.5s ease;
 }
 
-.txtbox>h4.show, .txtbox>p.show, .slogan.show, .sub-content>h5.show, .sub-content>p.show, .links.show, .video.show, .site-btn.show {
+.txtbox>h4.show, .txtbox>p.show, .slogan.show, .sub-content>h5.show, .sub-content>p.show, .links.show, .video.show {
     opacity: 1;
     transform: translateY(0);
 }

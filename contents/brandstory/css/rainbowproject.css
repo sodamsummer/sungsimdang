@@ -209,7 +209,7 @@ section {
 }
 
 .sec-txt h4 {
-    font-family: "Diphylleia", serif;
+    /* font-family: "Diphylleia", serif; */
     font-size: 48px;
     font-size: 3rem;
     color: #FEF3E2;
@@ -288,14 +288,15 @@ ul.rainbow_list li a {
     color: #fff;
     padding: 10px 0;
 
-    font-family: "Noto Serif KR", serif;
+    /* font-family: "Noto Serif KR", serif; */
     font-size: 20px;
     font-size: 1.25rem;
+    font-weight: 300;
 }
 
 /* modal 실행 css */
 #modal {
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.8);
 
     width: 100%;
     height: 100%;
@@ -322,12 +323,12 @@ ul.rainbow_list li a {
 }
 
 div.modal ul li {
-    width: 1200px;
+    width: 40%;
     margin: 0 auto;
 
     border: 1px solid red;
     background-color: #000;
-    border-radius: 50px;
+    border-radius: 20px;
     box-sizing: border-box;
     padding: 50px 10px;
     text-align: center;
@@ -340,39 +341,48 @@ div.modal ul li {
     display: none;
 }
 
-div.modal ul li h5 {
-    font-size: 32px;
-    font-size: 2rem;
-    display: inline-block;
+div.modal ul li h5 { 
+    font-family: "DM Mono", monospace;
+    font-size: 16px;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    /* display: inline-block; */
 
-    background-color: red;
+    /* background-color: red;
     border-radius: 50px;
-    padding: 0 20px;
+    padding: 0 20px; */
+    color: red;
 
     margin-bottom: 20px;
 }
 
 div.modal ul li h6 {
-    font-family: "Diphylleia", serif;
+    /* font-family: "Diphylleia", serif; */
     font-size: 28px;
     font-size: 1.75rem;
+    display: inline-block;
+    margin: 0 auto 30px;
 
     margin-bottom: 30px;
 }
 
-div.modal ul li h6::after {
+div.modal ul li h6::after { 
     content: "";
     display: block;
-    margin: 30px auto 0;
+    /* margin: 30px auto 0; */
 
-    width: 20%;
-    height: 2px;
+    width: 100%;
+    height: 28px;
     background-color: red;
+
+    position: relative;
+    top: -32px;
+    z-index: -999;
 }
 
 div.modal ul li .modal-img {
     width: 60%;
-    margin: 0 auto;
+    margin: 0 auto 30px;
     border-radius: 20px;
     overflow: hidden;
 }
@@ -384,9 +394,6 @@ div.modal ul li .modal-img img {
 
 div.modal ul li p {
     font-weight: 300;
-    font-size: 1rem;
-
-    margin-bottom: 30px;
 }
 
 /* x */
@@ -394,56 +401,26 @@ div.modal ul li .exit {}
 
 div.modal ul li .exit span {}
 
-#orange {
-    border-color: #ff5e00;
-}
+#orange {border-color: #ff5e00;}
+#orange h5 {color:#ff5e00}
+#orange h6::after {background-color: #ff5e00;}
 
-#orange h5,
-#orange h6::after {
-    background-color: #ff5e00;
-}
+#yellow {border-color: #ff9d00;}
+#yellow h5 {color: #ff9d00;}
+#yellow h6::after {background-color: #ff9d00;}
 
-#yellow {
-    border-color: #ff9d00;
-}
+#green {border-color: #1ec03e;}
+#green h5 {color: #1ec03e;}
+#green h6::after {background-color: #1ec03e;}
 
-#yellow h5,
-#yellow h6::after {
-    background-color: #ff9d00;
-}
+#blue {border-color: #348bee;}
+#blue h5 {color: #348bee;}
+#blue h6::after {background-color: #348bee;}
 
-#green {
-    border-color: #1ec03e;
-}
+#navy {border-color: #1c47bd;}
+#navy h5 {color: #1c47bd;}
+#navy h6::after {background-color: #1c47bd;}
 
-#green h5,
-#green h6::after {
-    background-color: #1ec03e;
-}
-
-#blue {
-    border-color: #348bee;
-}
-
-#blue h5,
-#blue h6::after {
-    background-color: #348bee;
-}
-
-#navy {
-    border-color: #1c47bd;
-}
-
-#navy h5,
-#navy h6::after {
-    background-color: #1c47bd;
-}
-
-#violet {
-    border-color: #7628db;
-}
-
-#violet h5,
-#violet h6::after {
-    background-color: #7628db;
-}
+#violet {border-color: #7628db;}
+#violet h5 {color: #7628db;}
+#violet h6::after {background-color: #7628db;}

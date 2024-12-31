@@ -374,6 +374,7 @@ div.modal ul li h6::after {
     width: 100%;
     height: 28px;
     background-color: red;
+    opacity: 0.5;
 
     position: relative;
     top: -32px;
@@ -493,4 +494,16 @@ div.modal ul li .exit {
 
 #violet h6::after {
     background-color: #7628db;
+}
+
+/* 효과1 - 아래에서 위로 */
+h4, .sec-subtit, .rainbow_list {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1.5s;
+}
+
+h4.show, .sec-subtit.show, .rainbow_list.show {
+    opacity: 1;
+    transform: translateY(0);
 }

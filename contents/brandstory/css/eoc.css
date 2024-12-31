@@ -519,6 +519,23 @@ section {
     margin-left: 30px;    
 }
 
+/* to top */
+.totop {background-color: #fff;}
+.totop a { 
+    outline: 2px solid red;
+    width: 51px;
+    height: 51px;
+    background: url(../img/totop.png) no-repeat top;
+
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.totop a:hover {
+    background-position: bottom;
+}
+
 /* 효과 */
 .txtbox>h4, .txtbox>p, .slogan, .sub-content>h5, .sub-content>p, .links, .video {
     opacity: 0;

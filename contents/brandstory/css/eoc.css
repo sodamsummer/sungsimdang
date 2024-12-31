@@ -211,7 +211,7 @@ section {
 .content {
     width: 90%;
     max-width: 1280px;
-    margin: 0 auto 300px;
+    margin: 0 auto 100px;
 }
 
 .content h4 {
@@ -241,12 +241,24 @@ section {
     /* outline: 2px solid red; */    
 }
 
+.content .slogan::after {
+    font-family: "DM Mono", monospace;    
+    content: "***";
+    color: #FAB12F;
+    display: block;
+    text-align: center;
+    letter-spacing: 2px;
+
+    margin-top: 100px;
+}
+
 .content .slogan ul li {
     width: 23.5%;
 }
 
 .content .slogan ul li .imgbox {
     overflow: hidden;
+    margin-bottom: 5px;
 }
 
 .content .slogan ul li:hover img {
@@ -278,6 +290,7 @@ section {
 
 
 /* sub-content */
+
 .sub-content {
     width: 90%;
     max-width: 1280px;
@@ -290,11 +303,37 @@ section {
 
 .sub-content h5 {
     margin-bottom: 50px;
-    font-weight: 300;
-    color: #ccc;
+    color: #000;
+    display: inline-block;
 }
 
 .sub-content h5::after {
+    content: "";
+    display: block;
+    /* margin: 30px auto 0; */
+
+    width: 100%;
+    height: 20px;
+    background-color: #FAB12F;
+
+    position: relative;
+    top: -20px;
+    z-index: -1;
+    animation: highlight 2s ease forwards;
+    /* 애니메이션 */
+}
+
+@keyframes highlight {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+/* .sub-content h5::after {
     content: "";
     display: block;
     margin: 30px auto 0;
@@ -302,7 +341,7 @@ section {
     width: 1px;
     height: 50px;
     background-color: #ccc;
-}
+} */
 
 .sub-content>p {
     font-family: "Diphylleia", serif;
@@ -361,7 +400,7 @@ section {
 .video {
     width: 90%;
     max-width: 1280px;
-    margin: 0 auto 200px;
+    margin: 0 auto 300px;
 }
 
 .video>p {
@@ -471,7 +510,7 @@ section {
 /* 사이트 이동 버튼 */
 .site-btn {
     position: absolute;
-    top: 104%;
+    top: 107%;
     left: 50%;
     transform: translateX(-50%);       
 }

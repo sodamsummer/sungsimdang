@@ -362,3 +362,15 @@ section {
     opacity: 0.5;  
     transition: all 0.5s;
 }
+
+/* 효과 */
+.notice, .instagram {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1.5s ease;
+}
+
+.notice.show, .instagram.show {
+    opacity: 1;
+    transform: translateY(0);
+}

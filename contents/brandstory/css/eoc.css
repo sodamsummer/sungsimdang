@@ -503,8 +503,8 @@ section {
     border-radius: 50px;
 
     position: absolute;
-    top: 30%;
-    left: 65%;
+    top: 20%;
+    left: 70%;
 }
 
 /* 사이트 이동 버튼 */
@@ -517,23 +517,6 @@ section {
 
 .site-btn ul li~li {
     margin-left: 30px;    
-}
-
-/* to top */
-.totop {background-color: #fff;}
-.totop a { 
-    outline: 2px solid red;
-    width: 51px;
-    height: 51px;
-    background: url(../img/totop.png) no-repeat top;
-
-    position: fixed;
-    bottom: 0;
-    right: 0;
-}
-
-.totop a:hover {
-    background-position: bottom;
 }
 
 /* 효과 */

@@ -213,9 +213,14 @@ ul.product li a:hover .imgbox {
     outline: 2px solid #FAB12F;
 }
 
+ul.product li a:hover img { 
+    opacity: 1;
+}
+
 ul.product li a img {
     width: 100%;
     display: block;
+    opacity: 0.8;
 
     transition: all 0.7s;
 }
@@ -230,4 +235,13 @@ ul.product li a .b-des {
     font-weight: 100;
     letter-spacing: -1px;
     word-break: keep-all;
+
+    /* 두줄까지 보임 */
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: keep-all;    
 }

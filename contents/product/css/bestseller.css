@@ -7,29 +7,30 @@ main {
     /* margin: 0 auto 200px; */
     margin: 0 auto;
 
-    height: 100%;
+    height: 50%;
 
-    background: url(../img/main0.jpg) no-repeat top/cover;
+    background: url(../img/main0_.jpg) no-repeat top/cover;
 }
 
 main .inner {
     /* outline: 2px solid orange; */
     height: 100%;
     position: relative;
-    /* h2 , sub-m의 기준 */
+    /* m-txt의 기준 */
 }
 
 main .m-txt {
+    text-align: center;
     /* outline: 2px solid red; */
+    width: 100%;
 
     position: absolute;
-    top: 40%;
-    left: 0;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    left: 50%;
 }
 
 main .post {
-    opacity: 0.9;
-    
     font-family: "DM Mono", monospace;
     font-size: 14px;
     font-size: 0.875rem;
@@ -46,6 +47,7 @@ main .post {
 main .post span.subpage {
     color: #FAB12F;
 }
+
 main .post span a {
     color: #D0B39D;
     display: inline-block;
@@ -60,37 +62,37 @@ main h2 {
     font-size: 64px;
     font-size: 4rem;
 
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 
     /* animation */
     opacity: 0;
     transform: translateY(-50px);
     animation: slideDown 1.5s forwards;
-    animation-delay: 0.3s; 
+    animation-delay: 0.3s;
 }
 
 main h2::after {
     content: "";
     display: block;
+    margin: 0 auto;
 
     width: 100px;
     height: 1px;
     background-color: #fff;
 
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 main p {
-    font-size: 20px;
-    font-size: 1.25rem;
+    font-size: 16px;
+    font-size: 1rem;
     font-weight: 300;
-    letter-spacing: 1.2px;
 
     /* animation */
     opacity: 0;
     transform: translateY(50px);
     animation: slideUp 1.5s forwards;
-    animation-delay: 0.6s; 
+    animation-delay: 0.6s;
 }
 
 @keyframes slideDown {
@@ -126,10 +128,10 @@ section {
     width: 100%;
     background-color: #5D4F44;
 
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
-.con-list ul {
+.con-list ul { 
     width: 90%;
     max-width: 1280px;
     margin: 0 auto;
@@ -137,7 +139,7 @@ section {
 
 .con-list ul li {
     /* outline: 2px solid red; */
-    width: 25%;
+    width: 33.33%;
     text-align: center;
     background-color: #68594C;
 }
@@ -169,80 +171,63 @@ section {
 
 
 /* .content */
-.content {
+.content { 
     width: 90%;
     max-width: 1280px;
     margin: 0 auto;
 
-    /* .con-tit의 기준 */
-    position: relative;
-
-    margin-bottom: 100px;
-}
-
-.content .con-tit {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.content h3 {
-    font-size: 16px;
-    font-size: 1rem;
-    font-weight: 300;
-
     margin-bottom: 50px;
 }
 
-.content h4 {
-    font-family: "Diphylleia", serif;
+ul.product li { 
+    /* outline: 2px solid yellow; */
 
-    font-size: 48px;
-    font-size: 3rem;
-}
-
-.content ul.product {}
-
-.content ul.product li {
     float: left;
-    width: 23.5%;
-    margin-bottom: 2%;
+    width: 22%;
+    height: 390px;
+
+    margin-bottom: 4%;
 }
 
-/* 첫번째, 두번째 칸 가리기 */
-.content ul.product li.hide {
-    opacity: 0;
+ul.product li~li {
+    margin-left: 4%
 }
 
-.content ul.product li~li {
-    margin-left: 2%
-}
-
-.content ul.product li:nth-child(4n+1) {
+ul.product li:nth-child(4n+1) {
     margin-left: 0;
 }
 
-.content ul.product li a {
-    width: 100%;
-    padding: 40px 20px 20px;
-    box-sizing: border-box;
-    display: block;
-    background-color: #FEF3E2;
-    color: #000;
+ul.product li a { 
+    color: #fff;
+}
 
-    overflow: hidden;
+ul.product li a .imgbox {     
+    outline: 2px solid #000;    
+    transition: all 0.2s;
+
+    margin-bottom: 20px;
 }
 
 /* hover */
-.content ul.product li:hover img {
-    transform: scale(1.1);
+ul.product li a:hover .imgbox { 
+    outline: 2px solid #FAB12F;
 }
 
-.content ul.product li a img {
+ul.product li a img {
     width: 100%;
     display: block;
 
     transition: all 0.7s;
 }
 
-.content ul.product li a p {}
+ul.product li a .b-name {
+    font-size: 20px;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+ul.product li a .b-des {
+    font-weight: 100;
+    letter-spacing: -1px;
+    word-break: keep-all;
+}

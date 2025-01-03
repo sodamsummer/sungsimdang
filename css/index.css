@@ -491,6 +491,7 @@ p.caption:hover a {
 .best-imgbox li a h5 {
     line-height: 4;
     color: #000;
+    opacity: 0;
 }
 
 

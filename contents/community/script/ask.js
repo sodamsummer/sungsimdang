@@ -1,7 +1,7 @@
 // ask.js
 
 $(document).ready(function () {
-    const text = "공사중입니다.";
+    const text = "현재 페이지 작업중입니다.";
     let index = 0;
 
     function typeText() {

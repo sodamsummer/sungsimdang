@@ -227,7 +227,7 @@ section {
     background-color: #FAB12F;
 }
 
-/* 효과 */
+/* fade 효과 */
 .b-list li, .b-btn {
     opacity: 0;
     transform: translateY(50px);

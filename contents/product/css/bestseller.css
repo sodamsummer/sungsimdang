@@ -245,3 +245,19 @@ ul.product li a .b-des {
     -webkit-box-orient: vertical;
     word-break: keep-all;    
 }
+
+/* fade 효과 */
+.product li .b-name, .product li .b-des {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1.5s ease;
+}
+
+.product li .b-name.show, .product li .b-des.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.product li .b-des {
+    transition-delay: 0.5s;
+}
